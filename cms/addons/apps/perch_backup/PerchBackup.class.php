@@ -56,7 +56,7 @@ class PerchBackup
 	   	include('pclzip.lib.php');
 	   	
 	   	$zipfolder = 'backup';
-	   	$zipfile = 'PerchBackup.zip';
+	   	$zipfile = strtolower('website-backup-'.date('d-M-Y').'.zip');
 	   	$file = $zipfolder.DIRECTORY_SEPARATOR.$zipfile;
 	   	
 		//create zip
@@ -69,8 +69,8 @@ class PerchBackup
 			exec($mysqldump_path.' --opt --host='.PERCH_DB_SERVER.' --user='.PERCH_DB_USERNAME.' --password='.PERCH_DB_PASSWORD.' '.PERCH_DB_DATABASE.' > backup/backup.sql');
 			//add to zip
 			$files[]= 'backup/backup.sql';
-			
 		}
+
 		if($backup_type == 'resources') {
 		   	//get resources folder and add to zip
 		   	$files[]= PERCH_PATH.'/resources';
@@ -82,21 +82,23 @@ class PerchBackup
 		   	$files[]= PERCH_PATH.'/resources';
 			//get templates
 			$files[]= PERCH_PATH.'/templates';
-			//get apps
-			$files[]= PERCH_PATH.'/apps';
+			//get addons
+			$files = $this->_get_addons($files);
 			//get config
 			$files[]= PERCH_PATH.'/config';
-			//get plugins
-			$files[]= PERCH_PATH.'/plugins';
-		}else{
+		}elseif($backup_type == 'all') {
 			$files[]= PERCH_PATH;
 		}
+
+		//die('<pre>'.print_r($files, true).'</pre>');
 		
 		//return zip
 		if ($zip->create($files,PCLZIP_OPT_REMOVE_PATH,PERCH_PATH,PCLZIP_OPT_ADD_PATH,'perch_backup') == 0) {
+			
 			if (file_exists('backup/backup.sql')) {
 				unlink('backup/backup.sql');
 			}
+			echo $zip->errorInfo();
 			exit;
 		}else{
 			header("Content-type:application/x-zip-compressed");
@@ -114,6 +116,31 @@ class PerchBackup
 		
 	}
 	
+	private function _get_addons($files)
+	{
+		$items = PerchUtil::get_dir_contents(PERCH_PATH.'/addons');
+
+		if (PerchUtil::count($items)) {
+			$out = array();
+
+			foreach ($items as $item) {
+				if (strpos($item, 'apps')===false) {
+					$files[] = PERCH_PATH.'/addons/'.$item;
+				}else{
+					$apps = PerchUtil::get_dir_contents(PERCH_PATH.'/addons/apps');
+					if (PerchUtil::count($apps)) {
+						foreach($apps as $app) {
+							if (!strpos($app, 'backup')) {
+								$files[] = PERCH_PATH.'/addons/apps/'.$app;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		return $files;
+	}
 	
     
 }

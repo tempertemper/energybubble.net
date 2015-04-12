@@ -2,7 +2,7 @@
     
     # Side panel
     echo $HTML->side_panel_start();
-    echo $HTML->heading3('We can backup');
+    echo $HTML->heading3('The following can be backed up');
     
     echo $HTML->success_message('Files');
     
@@ -21,18 +21,28 @@
     echo $HTML->heading1('Making a Backup');
 
 
-    echo $HTML->heading2('Backup your Perch data and customizations');
+    echo $HTML->heading2('Backup your data and customizations');
     echo '<div id="template-help">';
-    echo $HTML->para('Use the form below to backup your Perch data, data and customizations or the entire perch directory.');
-	echo $HTML->para('We do not backup your site files - just the perch directory or specified content. The checks on the left will show if we can also backup your MySQL database. If we cannot you will need to do this another way as all Perch data is stored in the database.');
+    echo $HTML->para('Use the form below to backup your content, data and customizations or the entire CMS directory.');
+	echo $HTML->para('This does not backup your site files - just the database, CMS folder or specified content.');
+    echo $HTML->para('The checks on the right will show if your MySQL database can also be backed up. If it cannot, you will need to do this another way as all  site content is stored in the database.');
     echo '</div>';
     echo $HTML->heading2('Select backup type and download backup');
     echo $Form->form_start();
 	
     $opts = array();
-	$opts[] = array('label'=>'Backup resources only', 'value'=>'resources');
-	$opts[] = array('label'=>'Backup resources and customizations', 'value'=>'custom');
-	$opts[] = array('label'=>'Backup entire Perch directory', 'value'=>'perch');
+    if($Backup->can_mysqldump($mysqldump_path)) {
+        $opts[] = array('label'=>'Database only', 'value'=>'database');
+        $opts[] = array('label'=>'Database and resources', 'value'=>'resources');
+        $opts[] = array('label'=>'Database, resources and customizations', 'value'=>'custom');
+        $opts[] = array('label'=>'Database and entire CMS folder', 'value'=>'all');
+    }else{
+        $opts[] = array('label'=>'Resources only', 'value'=>'resources');
+        $opts[] = array('label'=>'Resources and customizations', 'value'=>'custom');
+        $opts[] = array('label'=>'Entire CMS folder', 'value'=>'all');
+    }
+	
+	
 
 	echo $Form->select_field('backup_type', 'Backup Type', $opts);
     

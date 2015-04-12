@@ -8,7 +8,7 @@
     $Lang = $API->get('Lang');
 
     # Set the page title
-    $Perch->page_title = $Lang->get('Backup Perch data and customizations');
+    $Perch->page_title = $Lang->get('Backup data and customizations');
 
 
     # Do anything you want to do before output is started
@@ -19,7 +19,7 @@
     include(PERCH_CORE . '/inc/top.php');
     
     # Check that we are writable - if not display the error page, otherwise continue and display the backup page.
-    if($Settings->get('perch_backup_admin_only')->settingValue() == true && $CurrentUser->userRole() == 'Editor'){
+    if(!$CurrentUser->has_priv('perch_backup')){
     	include('modes/noaccess.post.php');
     
     }elseif($Backup->can_write_temp_file('backup')) {
