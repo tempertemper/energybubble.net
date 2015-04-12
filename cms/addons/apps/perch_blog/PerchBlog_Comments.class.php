@@ -77,7 +77,7 @@ class PerchBlog_Comments extends PerchAPI_Factory
 
 		$sql = ' * FROM '.$this->table;
 
-		$where[] = 'postID='.$this->db->pdb($postID);
+		$where[] = 'postID='.$this->db->pdb((int)$postID);
 		$where[] = 'commentStatus='.$this->db->pdb('LIVE');
 
 		if (isset($opts['_id'])) {
@@ -241,6 +241,7 @@ class PerchBlog_Comments extends PerchAPI_Factory
     	            $val = $opts['value'];
     	            $match = isset($opts['match']) ? $opts['match'] : 'eq';
     	            foreach($comments as $item) {
+    	            	if (!isset($item[$key])) $item[$key] = false;
     	                if (isset($item[$key])) {
     	                    switch ($match) {
                                 case 'eq': 
@@ -440,6 +441,7 @@ class PerchBlog_Comments extends PerchAPI_Factory
 
 		        $spam = false;
 		        $antispam = $SubmittedForm->get_antispam_values();
+		        
 		        $environment = $_SERVER;
 		       
 		        $spam_data = array();
@@ -447,15 +449,25 @@ class PerchBlog_Comments extends PerchAPI_Factory
 	            $spam_data['environment'] = $environment;
 	            $data['commentSpamData'] = PerchUtil::json_safe_encode($spam_data);
 
-		        
-		        if ($akismetAPIKey) {
-		            $spam = $this->_check_for_spam($antispam, $environment, $akismetAPIKey);
-		        }
+	            $data['commentIP'] = ip2long($_SERVER['REMOTE_ADDR']);
 
+		        
+		        $spam = $this->_check_for_spam($antispam, $environment, $akismetAPIKey);
+		        
 		        if ($spam) {
 		        	$data['commentStatus'] = 'SPAM';
 		        }else{
-		        	$data['commentStatus'] = 'PENDING';
+
+		        	$Users          = new PerchUsers;
+            		$CurrentUser    = $Users->get_current_user();
+            
+            		if (is_object($CurrentUser) && $CurrentUser->logged_in()) {
+            			$data['commentStatus'] = 'LIVE';
+            		}else{
+            			$data['commentStatus'] = 'PENDING';
+            		}
+
+		        	
 		        }
 
 
@@ -464,8 +476,26 @@ class PerchBlog_Comments extends PerchAPI_Factory
 					switch($key) {
 
 						case 'commentHTML':
-							$Textile = new Textile;
-							$val = $Textile->TextileRestricted($val);
+					        if (!class_exists('\\Netcarver\\Textile\\Parser', false) && class_exists('Textile', true)) { 
+					            // sneaky autoloading hack 
+					        }
+					        
+					        if (PERCH_HTML5) {
+					            $Textile = new \Netcarver\Textile\Parser('html5');
+					        }else{
+					            $Textile = new \Netcarver\Textile\Parser;
+					        }
+					        
+
+					        if (PERCH_RWD) {
+					            $val  =  $Textile->setDimensionlessImages(true)->textileRestricted($val);
+					        }else{
+					            $val  =  $Textile->textileRestricted($val);
+					        }
+					        
+					        if (defined('PERCH_XHTML_MARKUP') && PERCH_XHTML_MARKUP==false) {
+							    $val = str_replace(' />', '>', $val);
+							}
 							break;
 
 						case 'commentURL':
@@ -491,7 +521,16 @@ class PerchBlog_Comments extends PerchAPI_Factory
 				}
 
 
-				return $this->create($data);
+				$r = $this->create($data);
+
+				$Post->update_comment_count();
+
+				if (is_object($r) && $r->commentStatus()=='PENDING') {
+					$this->_notify_author_of_comment($Post, $r);
+				}
+
+
+				return $r;
 
 
 			}
@@ -502,36 +541,78 @@ class PerchBlog_Comments extends PerchAPI_Factory
 		PerchUtil::debug($SubmittedForm);
 	}
 
-	private function _check_for_spam($fields, $environment, $akismetAPIKey)
+
+	/**
+	 * Delete spam messages older than $days days
+	 * @param  int $days Age in days
+	 * @return int       Number of items deleted
+	 */
+	public function delete_old_spam($days)
+	{
+		$time = strtotime('-'.$days.' DAYS');
+		$date = date('Y-m-d H:i:s', $time);
+
+		$sql = 'SELECT COUNT(*) AS qty FROM '.$this->table.' WHERE commentStatus='.$this->db->pdb('SPAM').' AND commentDateTime < '.$this->db->pdb($date);
+		$count = $this->db->get_count($sql);
+
+		if ($count>0) {
+			$sql = 'DELETE FROM '.$this->table.' WHERE commentStatus='.$this->db->pdb('SPAM').' AND commentDateTime < '.$this->db->pdb($date);
+			$this->db->execute($sql);
+		}
+
+		return $count;
+	}
+
+
+
+	private function _notify_author_of_comment($Post, $Comment)
+	{
+		$Settings = $this->api->get('Settings');
+
+		if ($Settings->get('perch_blog_comment_notify')->val()=='1') {
+
+			$msg = $Comment->commentName().' ('.$Comment->commentEmail().'):'."\n\n";
+			$msg .= strip_tags($Comment->commentHTML())."\n\n";
+			$msg .= 'http://'.$_SERVER['SERVER_NAME'].PERCH_LOGINPATH.'/addons/apps/perch_blog/comments/edit/?id='.$Comment->id()."\n\n";
+
+
+			$Author = $Post->get_author();
+			$Lang = $this->api->get('Lang');
+
+	        $Email = $this->api->get('Email');
+	        $Email->subject($Lang->get('New comment: ').$Post->postTitle());
+	        $Email->senderName(PERCH_EMAIL_FROM_NAME);
+	        $Email->senderEmail(PERCH_EMAIL_FROM);
+	        $Email->recipientEmail($Author->authorEmail());
+	        $Email->replyToEmail($Comment->commentEmail());
+	        $Email->replyToName($Comment->commentName());
+	        $Email->body($msg);
+	        $Email->send();
+		}
+
+	}
+
+	private function _check_for_spam($fields, $environment, $akismetAPIKey=false)
     {
-    	if (!class_exists('PerchBlog_Akismet')) {
-    		include_once('PerchBlog_Akismet.class.php');
-    	}
-        if (PerchBlog_Akismet::check_message_is_spam($akismetAPIKey, $fields, $environment)) {
-            PerchUtil::debug('Message is spam');
+    	if (isset($fields['honeypot']) && trim($fields['honeypot'])!='') {
+    		PerchUtil::debug('Honeypot field completed: message is spam');
             return true;
-        }else{
-            PerchUtil::debug('Message is not spam');
-        }
+    	}
+
+    	if ($akismetAPIKey) {
+	    	if (!class_exists('PerchBlog_Akismet')) {
+	    		include_once('PerchBlog_Akismet.class.php');
+	    	}
+	        if (PerchBlog_Akismet::check_message_is_spam($akismetAPIKey, $fields, $environment)) {
+	            PerchUtil::debug('Message is spam');
+	            return true;
+	        }else{
+	            PerchUtil::debug('Message is not spam');
+	        }
+	    }
         return false;
     }
 
 		
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

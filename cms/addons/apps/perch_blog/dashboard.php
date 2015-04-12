@@ -6,7 +6,7 @@
 	include('PerchBlog_Comments.class.php');
     include('PerchBlog_Comment.class.php');
 
-    $API   = new PerchAPI('perch_blog', 1);
+    $API   = new PerchAPI(1, 'perch_blog');
     $Lang  = $API->get('Lang');
     $Posts = new PerchBlog_Posts($API);
     $posts = $Posts->get_recent(5);
@@ -32,6 +32,9 @@
 				echo '<ul>';
 				foreach($posts as $Post) {
 					echo '<li>';
+						if ($Post->postStatus()=='Draft') {
+							echo PerchUtil::html(strtoupper($Lang->get('Draft:'))).' ';
+						}
 						echo '<a href="'.PerchUtil::html(PERCH_LOGINPATH.'/addons/apps/perch_blog/edit/?id='.$Post->id()).'">';
 							echo PerchUtil::html($Post->postTitle());
 						echo '</a>';
