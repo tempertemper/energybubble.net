@@ -2,6 +2,6 @@
   $apps_list = array(
     'content',
     'categories',
-    'blog',
-    'forms',
+    'perch_blog',
+    'perch_forms',
   );
