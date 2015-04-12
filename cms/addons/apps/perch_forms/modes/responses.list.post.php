@@ -22,7 +22,9 @@
     <ul class="smartbar">
         <li class="<?php echo ($filter=='all'?'selected':''); ?>"><a href="<?php echo PerchUtil::html($API->app_path().'/responses/?id='.$Form->id()); ?>"><?php echo $Lang->get('All Responses'); ?></a></li>
         <li class="new <?php echo ($filter=='spam'?'selected':''); ?>"><a href="<?php echo PerchUtil::html($API->app_path().'/responses/'.'?id='.$Form->id().'&spam=1'); ?>"><?php echo $Lang->get('Spam'); ?></a></li>
+        <?php if ($CurrentUser->has_priv('perch_forms.configure')) { ?>
         <li class="<?php echo ($filter=='options'?'selected':''); ?>"><a href="<?php echo PerchUtil::html($API->app_path().'/settings/?id='.$Form->id()); ?>"><?php echo $Lang->get('Form Options'); ?></a></li>
+        <?php } ?>
         <li class="fin"><a class="download icon" href="<?php echo $HTML->encode($API->app_path().'/responses/export/?id='.$Form->id()); ?>"><?php echo $Lang->get('Download CSV'); ?></a></li>
     </ul>
     <?php

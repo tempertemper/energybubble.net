@@ -12,6 +12,13 @@ class PerchForms_Response extends PerchAPI_Base
         return false;
     }
     
+    public function page()
+    {
+        $all = PerchUtil::json_safe_decode($this->responseJSON());
+        if (isset($all->page)) return $all->page;
+        return false;
+    }
+
     public function files()
     {
         $all = PerchUtil::json_safe_decode($this->responseJSON());
@@ -27,7 +34,7 @@ class PerchForms_Response extends PerchAPI_Base
         
         $json = PerchUtil::json_safe_decode($this->responseSpamData(),true);
         if (PerchUtil::count($json)) {
-            $API = new PerchAPI('1.0', 'perch_forms');
+            $API = new PerchAPI(1, 'perch_forms');
             $Forms = new PerchForms_Forms($API);
             $Form = $Forms->find($this->formID());
             
@@ -50,7 +57,7 @@ class PerchForms_Response extends PerchAPI_Base
         
         $json = PerchUtil::json_safe_decode($this->responseSpamData(),true);
         if (PerchUtil::count($json)) {
-            $API = new PerchAPI('1.0', 'perch_forms');
+            $API = new PerchAPI(1, 'perch_forms');
             $Forms = new PerchForms_Forms($API);
             $Form = $Forms->find($this->formID());
             
@@ -65,5 +72,3 @@ class PerchForms_Response extends PerchAPI_Base
         }
     }
 }
-
-?>
