@@ -1,0 +1,34 @@
+					<perch:form id="contact_form" method="post" app="perch_forms">
+
+						<perch:label for="name">Name</perch:label>
+						<perch:input type="text" id="name" required="true" placeholder="Name" label="Name" />
+
+						<perch:error for="name" type="required">
+							<span class="error">Please enter your name here</span>
+						</perch:error>
+
+						<perch:label for="email">Email</perch:label>
+						<perch:input type="email" id="email" required="true" placeholder="Email Address"  label="Email" />
+
+						<perch:error for="email" type="required">
+							<span class="error">Please enter your email address</span>
+						</perch:error>
+
+						<perch:error for="email" type="format">
+							<span class="error">Please check the format of your email address</span>
+						</perch:error>
+
+						<perch:label for "message">Message</perch:label>
+						<perch:input type="textarea" id="message" required="true" placeholder="Message" label="Message" />
+
+						<perch:error for="message" type="required">
+							<span class="error">Please enter your message here</span>
+						</perch:error>
+
+						<perch:input type="submit" value="Send" />
+
+						<perch:success>
+							<perch:content id="success" type="textarea" label="Success Text" textile="true" editor="markitup" />
+						</perch:success>
+
+					</perch:form>
