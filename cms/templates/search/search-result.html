@@ -1,26 +1,22 @@
 <perch:before>
-<h3>Search results for &#8220;<perch:search id="key" />&#8221;</h3>
+    <h1>Search results for &#8220;<perch:search id="search_key" />&#8221;</h1>
 
-<perch:form id="search" method="get" action="/search.php">
-    <div>
-        <perch:label for="q">Search</perch:label>
-        <perch:input type="search" id="q" />
-        <perch:input type="submit" value="Go" />
-    </div>
-</perch:form>
-
-<perch:if exists="paging">
-    <h2><perch:search id="total" /> results:</h2>
-</perch:if>
-
-
-    <ul>
+    <perch:if exists="paging">
+        <p><perch:search id="total" /> results</p>
+    </perch:if>
+        <ul>
 </perch:before>
 
         <li class="<perch:search id="perch_item_odd" />">
-            <h3><a href="<perch:search id="url" />"><perch:search id="title" /></a></h3>
-            <perch:if exists="excerpt"><p class="excerpt">&hellip;<perch:search id="excerpt" encode="false" />&hellip;</p></perch:if>
-            <p><a href="<perch:search id="url" />">Go to article&hellip;</a></p>
+            <h2><a href="<perch:search id="result_url" />"><perch:search id="result_title" /></a></h2>
+            <perch:if exists="result_excerpt"><p class="excerpt">&hellip;<perch:search id="result_excerpt" encode="false" />&hellip;</p></perch:if>
+            <p><a href="<perch:search id="result_url" />">
+                <perch:if exists="result_pageNavText">
+                    <perch:search id="result_pageNavText" />
+                <perch:else />
+                    <perch:search id="result_url" />
+                </perch:if>
+                </a></p>
         </li>
 
 <perch:after>
@@ -28,12 +24,12 @@
 
     <perch:if exists="paging">
         <div class="paging">
-            <p>Page <perch:search id="current_page" /> of <perch:search id="number_of_pages" /></p>
-            <perch:if exists="not_last_page">
-                <a href="<perch:search id="next_url" encode="false" />" class="next">View next page &raquo;</a>
-            </perch:if>
+            Page <perch:search id="current_page" /> of <perch:search id="number_of_pages" />
             <perch:if exists="not_first_page">
-                <a href="<perch:search id="prev_url" encode="false" />" class="previous">&laquo; View previous page</a>
+                <a href="<perch:search id="prev_url" encode="false" />">Previous</a>
+            </perch:if>
+            <perch:if exists="not_last_page">
+                <a href="<perch:search id="next_url" encode="false" />">Next</a>
             </perch:if>
         </div>
     </perch:if>
@@ -41,34 +37,12 @@
 
 
 <perch:noresults>
-
-    <perch:if exists="key">
-	    <div class="search-form">
-	        <h3>Search results for &#8220;<perch:search id="key" />&#8221;</h3>
+    <perch:if exists="search_key">
+        <h1>Search results for &#8220;<perch:search id="search_key" />&#8221;</h1>
     <perch:else />
-	    <div class="search-form">
- 	       <h3>Search for an article:</h3>
+        <h1>Search</h1>
     </perch:if>
-
-	    <perch:form id="search" method="get" action="/search.php">
-	            <perch:label for="q">Enter search term here</perch:label>
-	            <perch:input type="search" id="q" />
-	            <perch:input type="submit" value="Search" />
-	    </perch:form>
-
-	</div>
-
-    <div class="actions">
-	    <h3>Or:</h3>
-	    <ul>
-		    <li><a href="/archive">Browse the archives</a></li>
-		    <li><a href="/">Head back to the home page</a></li>
-		</ul>
-	</div>
-
-
-    <perch:if exists="key">
-        <p>Sorry, there are no results for &#8220;<perch:search id="key" />&#8221;.</p>
+    <perch:if exists="search_key">
+        <p>Sorry, there are no results for &#8220;<perch:search id="search_key" />&#8221;.</p>
     </perch:if>
-
 </perch:noresults>
