@@ -6,6 +6,7 @@
 
   case('energybubble.local') :
     define('PERCH_SITEPATH', '***REMOVED***');
+    define('PERCH_SCHEDULE_SECRET', '***REMOVED***');
     define("PERCH_DB_USERNAME", '***REMOVED***');
     define("PERCH_DB_PASSWORD", '***REMOVED***');
     define("PERCH_DB_DATABASE", "energybubble-local");
