@@ -2,14 +2,6 @@
 
   perch_layout('global/header');
 
-  perch_content('Main heading');
-
-  perch_pages_navigation([
-    'hide-extensions'=>true,
-    'hide-default-doc'=>true,
-    'levels'=>1,
-  ]);
-
   perch_blog_recent_posts(10);
 
   perch_blog_categories();
