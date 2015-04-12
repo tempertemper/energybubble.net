@@ -1,14 +1,6 @@
 <?php
 
-  perch_layout('global/header');
-
-  perch_content('Main heading');
-
-  perch_pages_navigation([
-    'hide-extensions'=>true,
-    'hide-default-doc'=>true,
-    'levels'=>1,
-  ]);
+  perch_layout('blog/archive_header');
 
   $posts_per_page = 10;
   $template     = 'post_in_list.html';
@@ -20,7 +12,7 @@
 
   /* --------------------------- POSTS BY CATEGORY --------------------------- */
   if (perch_get('cat')) {
-    echo '<h1>Archive of: '.perch_blog_category(perch_get('cat'), true).'</h1>';
+    echo '<h1><a href="/blog/">Blog</a> category: '.perch_blog_category(perch_get('cat'), true).'</h1></header>';
 
     perch_blog_custom(array(
       'category'   => perch_get('cat'),
@@ -35,7 +27,7 @@
 
   /* --------------------------- POSTS BY TAG --------------------------- */
   if (perch_get('tag')) {
-    echo '<h1>Archive of: '.perch_blog_tag(perch_get('tag'), true).'</h1>';
+    echo '<h1><a href="/blog/">Blog</a> tag: '.perch_blog_tag(perch_get('tag'), true).'</h1></header>';
 
     perch_blog_custom(array(
       'tag'      => perch_get('tag'),
@@ -65,7 +57,7 @@
       $title_date_format = '%B, %Y';
     }
 
-    echo '<h1>Archive of: '.strftime($title_date_format, strtotime($date_from)).'</h1>';
+    echo '<h1><a href="/blog/">Blog</a> posts from '.strftime($title_date_format, strtotime($date_from)).'</h1></header>';
 
     perch_blog_custom(array(
       'filter'     => 'postDateTime',
@@ -83,9 +75,9 @@
   /* --------------------------- POSTS BY AUTHOR --------------------------- */
   if (perch_get('author')) {
 
-    echo '<h1>Posts by '.perch_blog_author(perch_get('author'), array(
+    echo '<h1><a href="/blog/">Blog</a> posts by '.perch_blog_author(perch_get('author'), array(
                         'template' => 'author_name.html',
-                        ), true).'</h1>';
+                        ), true).'</h1></header>';
 
     perch_blog_custom(array(
       'author'     => perch_get('author'),
@@ -102,7 +94,7 @@
 
   if ($posts_displayed == false) {
 
-    echo '<h1>Archive</h1>';
+    echo'<h1><a href="/blog/">Blog</a> archive</h1></header>';
 
     perch_blog_custom(array(
       'template'   => $template,
