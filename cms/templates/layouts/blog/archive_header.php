@@ -21,13 +21,3 @@
   <a href="/" class="logo">
     <img src="<?php perch_path('feathers/energybubble/img/energybubble-logo.png'); ?>" alt="energybubble logo" />
   </a>
-
-  <nav role="navigation">
-    <?php
-      perch_pages_navigation([
-        'hide-extensions'=>true,
-        'hide-default-doc'=>true,
-        'levels'=>1,
-      ]);
-    ?>
-  </nav>

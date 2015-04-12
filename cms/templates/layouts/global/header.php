@@ -14,3 +14,15 @@
 		echo '<body>';
 	}
 ?>
+
+<header role="banner">
+
+  <a href="/" class="logo">
+    <img src="<?php perch_path('feathers/energybubble/img/energybubble-logo.png'); ?>" alt="energybubble logo" />
+  </a>
+
+  <h1>
+    <?php perch_content('Main heading'); ?>
+  </h1>
+
+</header>
