@@ -16,8 +16,8 @@ miu.ImageUpload = function()
 			}
 			
 			form.css({
-				'top': textarea.position().top+5,
-				'left': textarea.closest('.markItUpContainer').find('li.'+button_class).position().left-322
+				'top': textarea.position().top+55,
+				'left': textarea.closest('.markItUpContainer').find('li.'+button_class).position().left-270
 			});
 			
 			
@@ -72,6 +72,8 @@ miu.ImageUpload = function()
 			
 			form.attr('action', markItUp.***REMOVED***+'image_upload/image_upload.php');
 			
+
+
 			
 			form.ajaxForm({
 				beforeSubmit: function(){
@@ -120,7 +122,7 @@ miu.ImageUpload = function()
 									var s_alt = '[]';
 									var s_class = '';
 									if (alt) s_alt = '['+alt+']';
-									if (classname) s_class = '.'+classname;
+									if (classname) s_class = '{.'+classname+'}';
 									output = '!'+s_alt+'('+r+')'+s_class;
 									break;
 
@@ -145,10 +147,14 @@ miu.ImageUpload = function()
 				},
 				data: {
 					upload: true,
-					image: !file_upload,
-					width: textarea.attr('data-width'),
-					height: textarea.attr('data-height'),
-					crop: textarea.attr('data-crop')
+					image:   !file_upload,
+					width: 	 textarea.attr('data-width'),
+					height:  textarea.attr('data-height'),
+					crop: 	 textarea.attr('data-crop'),
+					density: textarea.attr('data-density'),
+					quality: textarea.attr('data-quality'),
+					sharpen: textarea.attr('data-sharpen'),
+					bucket:  textarea.attr('data-bucket')
 				}
 			});
 			
