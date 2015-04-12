@@ -1,125 +1,127 @@
 <?php
-	return [
+  return [
 
-		/*
-		|--------------------------------------------------------------------------
-		| Environment settings
-		|--------------------------------------------------------------------------
-		|
-		| Various file operations (notably moving files to cloud storage) needs a 
-		| temporary folder to work in. This should be OUTSIDE of the
-		| web ***REMOVED***, and should be writable by PHP.
-		|
-		*/
+    /*
+    |--------------------------------------------------------------------------
+    | Environment settings
+    |--------------------------------------------------------------------------
+    |
+    | Various file operations (notably moving files to cloud storage) needs a
+    | temporary folder to work in. This should be OUTSIDE of the
+    | web ***REMOVED***, and should be writable by PHP.
+    |
+    */
 
-		'env' => [
+    'env' => [
 
-			'temp_folder' => '/tmp',
+      'temp_folder' => '/tmp',
 
-		],
+    ],
 
 
 
-		/*
-		|--------------------------------------------------------------------------
-		| Routing Tokens
-		|--------------------------------------------------------------------------
-		|
-		| URL Routing uses tokens for pattern matching. Custom tokens can be 
-		| specified as 'token_id' => 'regular expression'.
-		| For performance, tokens are converted to regexp at edit time. If you 
-		| make a change here, re-save the page options for the change to take effect.
-		|
-		*/
-	
-		'routing_tokens' => [
+    /*
+    |--------------------------------------------------------------------------
+    | Routing Tokens
+    |--------------------------------------------------------------------------
+    |
+    | URL Routing uses tokens for pattern matching. Custom tokens can be
+    | specified as 'token_id' => 'regular expression'.
+    | For performance, tokens are converted to regexp at edit time. If you
+    | make a change here, re-save the page options for the change to take effect.
+    |
+    */
 
-		],		
+    'routing_tokens' => [
 
-		/*
-		|--------------------------------------------------------------------------
-		| Amazon S3
-		|--------------------------------------------------------------------------
-		|
-		| Amazon security credentials for accessing S3 
-		|
-		*/
-	
-		'amazon_s3' => [
+      'blogslug' => '[1-2][0-9]{3}\-[0-9]{2}\-[0-3][0-9]-[a-z0-9\-]+',
 
-			'access_key_id'     => '',
-			'secret_access_key' => '',
-			'handler'			=> 'PerchS3_ResourceBucket',
-			'handler_path'   	=> PERCH_PATH.'/addons/apps/perch_s3/PerchS3_ResourceBucket.class.php',
+    ],
 
-		],
+    /*
+    |--------------------------------------------------------------------------
+    | Amazon S3
+    |--------------------------------------------------------------------------
+    |
+    | Amazon security credentials for accessing S3
+    |
+    */
 
-		/*
-		|--------------------------------------------------------------------------
-		| OpenStack Object Storage 
-		|--------------------------------------------------------------------------
-		|
-		| Security credentials for accessing OpenStack Object Storage services such 
-		| as Rackspace Cloud Files.
-		|
-		*/
-	
-		'openstack_object_storage' => [
+    'amazon_s3' => [
 
-			'username'     => '',
-			'password'     => '',
-			'tenantid'     => '',
-			'endpoint'     => 'https://lon.identity.api.rackspacecloud.com/v2.0',
-			'region'       => 'LON',
-			'handler'      => 'PerchOpenStack_ResourceBucket',
-			'handler_path' => PERCH_PATH.'/addons/apps/perch_openstack/PerchOpenStack_ResourceBucket.class.php',
+      'access_key_id'     => '',
+      'secret_access_key' => '',
+      'handler'     => 'PerchS3_ResourceBucket',
+      'handler_path'    => PERCH_PATH.'/addons/apps/perch_s3/PerchS3_ResourceBucket.class.php',
 
-		],
+    ],
 
-		/*
-		|--------------------------------------------------------------------------
-		| Varnish
-		|--------------------------------------------------------------------------
-		|
-		| Enable support for purging and banning pages from your varnish cache
-		|
-		*/
-		
-		'varnish' => [
+    /*
+    |--------------------------------------------------------------------------
+    | OpenStack Object Storage
+    |--------------------------------------------------------------------------
+    |
+    | Security credentials for accessing OpenStack Object Storage services such
+    | as Rackspace Cloud Files.
+    |
+    */
 
-			'enabled' => false,
+    'openstack_object_storage' => [
 
-		],
+      'username'     => '',
+      'password'     => '',
+      'tenantid'     => '',
+      'endpoint'     => 'https://lon.identity.api.rackspacecloud.com/v2.0',
+      'region'       => 'LON',
+      'handler'      => 'PerchOpenStack_ResourceBucket',
+      'handler_path' => PERCH_PATH.'/addons/apps/perch_openstack/PerchOpenStack_ResourceBucket.class.php',
 
-		/*
-		|--------------------------------------------------------------------------
-		| Search
-		|--------------------------------------------------------------------------
-		|
-		| Configure your search provider and any settings needed for it.
-		|
-		*/
-		
-		'search' => [
+    ],
 
-			'provider' => 'native',
+    /*
+    |--------------------------------------------------------------------------
+    | Varnish
+    |--------------------------------------------------------------------------
+    |
+    | Enable support for purging and banning pages from your varnish cache
+    |
+    */
 
-		],
+    'varnish' => [
 
-		/*
-		|--------------------------------------------------------------------------
-		| Cache
-		|--------------------------------------------------------------------------
-		|
-		| Configure your caching provider and any settings needed for it.
-		|
-		*/
-		
-		'cache' => [
+      'enabled' => false,
 
-			'provider' => 'native',
+    ],
 
-		],
-		
+    /*
+    |--------------------------------------------------------------------------
+    | Search
+    |--------------------------------------------------------------------------
+    |
+    | Configure your search provider and any settings needed for it.
+    |
+    */
 
-	];
+    'search' => [
+
+      'provider' => 'native',
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Cache
+    |--------------------------------------------------------------------------
+    |
+    | Configure your caching provider and any settings needed for it.
+    |
+    */
+
+    'cache' => [
+
+      'provider' => 'native',
+
+    ],
+
+
+  ];
