@@ -1,0 +1,9 @@
+{
+  "name": "energybubble",
+  "dependencies": {
+    "susy": "2.2.*",
+    "modular-scale": "2.0.*",
+    "responsive-nav": "1.*",
+    "html5shiv": "3.*"
+  }
+}
