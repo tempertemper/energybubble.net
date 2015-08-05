@@ -1,7 +1,7 @@
-<?php
+<?php perch_layout('global/header'); ?>
 
-  perch_layout('global/header');
+<main role="main">
+  <?php perch_content('Primary content'); ?>
+</main>
 
-  perch_content('Primary content');
-
-  perch_layout('global/footer');
+<?php perch_layout('global/footer'); ?>
