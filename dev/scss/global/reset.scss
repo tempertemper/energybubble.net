@@ -14,17 +14,8 @@ body {
   margin: 0;
 }
 
-a:focus {
-  outline: none;
-}
-
-textarea {
-  overflow-y: auto;
-  resize: none;
-}
-
-button {
-  background-image: none;
+main {
+  display: block;
 }
 
 
@@ -124,6 +115,15 @@ input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
   display: none;
 }
+
+a:focus {
+  outline: none;
+}
+
+button {
+  background-image: none;
+}
+
 
 // Responsive styling
 
