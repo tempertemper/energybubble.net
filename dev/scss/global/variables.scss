@@ -1,0 +1,21 @@
+// Layout breakpoints
+
+$xs: 25em;
+$s: 31em;
+$m: 43em;
+$l: 57em;
+$xl: 72em;
+
+
+// Primary (blue)
+
+$colour-primary: #FD9100; // normal
+$colour-primary-lighter: lighten($colour-primary, 5%);
+$colour-primary-light: lighten($colour-primary, 53%);
+$colour-primary-darker: darken($colour-primary, 5%);
+$colour-primary-darkest: darken($colour-primary, 15%);
+
+
+// Style
+
+$border-radius-default: 5px;
