@@ -1,0 +1,30 @@
+body {
+  @include container(40em);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+@media (min-width: $m) {
+
+  [role="banner"],
+  [role="main"],
+  [role="complementary"],
+  [role="contentinfo"] {
+    @include layout($wide);
+    width: span(4 of 6);
+    @include pre(1 of 6);
+  }
+}
+
+$section-divider: 3em;
+
+section,
+aside,
+article {
+  margin-top: $section-divider;
+  margin-bottom: $section-divider;
+}
+
+[role="contentinfo"] {
+  margin-top: $section-divider;
+}
