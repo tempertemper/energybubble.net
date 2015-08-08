@@ -40,8 +40,4 @@
     </svg>
   </a>
 
-  <h1>
-    <?php perch_content('Main heading'); ?>
-  </h1>
-
 </header>
