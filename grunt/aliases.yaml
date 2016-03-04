@@ -1,0 +1,14 @@
+default:
+  - 'watch'
+
+css:
+  - 'sass'
+  - 'postcss'
+
+js:
+  - 'concat'
+  - 'uglify'
+
+files:
+  - 'copy'
+  - 'imagemin'

@@ -1,6 +1,0 @@
-{
-	"lang":"en-gb",
-	"Forms":"Forms",
-	"CSV":"CSV",
-	"%s responses":"%s responses"
-}
