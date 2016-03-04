@@ -8,16 +8,11 @@
   <?php perch_page_attributes(); ?>
   <?php perch_get_css(); ?>
 </head>
-<?php
-  if (perch_layout_has('body-class')) {
-    echo '<body class="'.perch_layout_var('body-class', true).'">';
-  }else{
-    echo '<body>';
-  }
-?>
 
-<header role="banner">
+<body>
 
-  <a href="/" class="logo">
-    <img src="<?php perch_path('feathers/energybubble/img/energybubble-logo.png'); ?>" alt="energybubble logo" />
-  </a>
+  <header role="banner">
+
+    <a href="/" class="logo">
+      <?php perch_layout('global/_logo'); ?>
+    </a>

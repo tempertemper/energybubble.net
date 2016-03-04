@@ -12,7 +12,7 @@
 
   /* --------------------------- POSTS BY CATEGORY --------------------------- */
   if (perch_get('cat')) {
-    echo '<h1><a href="/blog/">Blog</a> category: '.perch_blog_category(perch_get('cat'), true).'</h1></header>';
+    echo '<h1><a href="/">Blog</a> category: '.perch_blog_category(perch_get('cat'), true).'</h1></header><main role="main">';
 
     perch_blog_custom(array(
       'category'   => perch_get('cat'),
@@ -27,7 +27,7 @@
 
   /* --------------------------- POSTS BY TAG --------------------------- */
   if (perch_get('tag')) {
-    echo '<h1><a href="/blog/">Blog</a> tag: '.perch_blog_tag(perch_get('tag'), true).'</h1></header>';
+    echo '<h1><a href="/">Blog</a> tag: '.perch_blog_tag(perch_get('tag'), true).'</h1></header><main role="main">';
 
     perch_blog_custom(array(
       'tag'      => perch_get('tag'),
@@ -57,7 +57,7 @@
       $title_date_format = '%B, %Y';
     }
 
-    echo '<h1><a href="/blog/">Blog</a> posts from '.strftime($title_date_format, strtotime($date_from)).'</h1></header>';
+    echo '<h1><a href="/">Blog</a> posts from '.strftime($title_date_format, strtotime($date_from)).'</h1></header><main role="main">';
 
     perch_blog_custom(array(
       'filter'     => 'postDateTime',
@@ -75,9 +75,9 @@
   /* --------------------------- POSTS BY AUTHOR --------------------------- */
   if (perch_get('author')) {
 
-    echo '<h1><a href="/blog/">Blog</a> posts by '.perch_blog_author(perch_get('author'), array(
+    echo '<h1><a href="/">Blog</a> posts by '.perch_blog_author(perch_get('author'), array(
                         'template' => 'author_name.html',
-                        ), true).'</h1></header>';
+                        ), true).'</h1></header><main role="main">';
 
     perch_blog_custom(array(
       'author'     => perch_get('author'),
@@ -94,7 +94,7 @@
 
   if ($posts_displayed == false) {
 
-    echo'<h1><a href="/blog/">Blog</a> archive</h1></header>';
+    echo'<h1><a href="/">Blog</a> archive</h1></header><main role="main">';
 
     perch_blog_custom(array(
       'template'   => $template,
@@ -104,8 +104,8 @@
     ));
   }
 
+  perch_blog_date_archive_years();
   perch_blog_categories();
   perch_blog_tags();
-  perch_blog_date_archive_years();
 
   perch_layout('global/footer');

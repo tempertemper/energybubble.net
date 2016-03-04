@@ -1,25 +1,20 @@
 <?php
-  perch_layout('global/header', [
-    'body-class' => 'home',
-  ]);
-?>
 
-<main role="main">
+  perch_layout('global/header');
 
-  <h1>
-    <?php perch_content('Main heading'); ?>
-  </h1>
+  echo '<main role="main">';
+  echo '<h1>';
+  perch_content('Main heading');
+  echo '</h1>';
 
-  <?php perch_content('Primary content'); ?>
+  perch_content('Primary content');
 
-  <?php
-    perch_blog_recent_posts(10);
+  perch_blog_recent_posts(10);
 
-    perch_blog_categories();
-    perch_blog_tags();
-    perch_blog_date_archive_years();
-  ?>
+  perch_blog_categories();
+  perch_blog_tags();
+  perch_blog_date_archive_years();
 
-</main>
+  echo '</main>';
 
-<?php perch_layout('global/footer'); ?>
+  perch_layout('global/footer');

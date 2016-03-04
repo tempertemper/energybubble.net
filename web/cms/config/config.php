@@ -20,11 +20,19 @@
     define('PERCH_PRODUCTION_MODE', PERCH_STAGING);
     break;
 
+  case('energybubble.local') :
+  case('***REMOVED***') :
+    define('PERCH_EMAIL_USERNAME', '***REMOVED***');
+    define('PERCH_EMAIL_PASSWORD', '***REMOVED***');
+  break;
+
   default :
     define("PERCH_DB_USERNAME", 'energybubble');
     define("PERCH_DB_PASSWORD", '***REMOVED***');
     define("PERCH_DB_DATABASE", "energybubble-production");
     define('PERCH_PRODUCTION_MODE', PERCH_PRODUCTION);
+    define('PERCH_EMAIL_USERNAME', '***REMOVED***');
+    define('PERCH_EMAIL_PASSWORD', '***REMOVED***');
     break;
   }
 
@@ -39,8 +47,6 @@
   define('PERCH_EMAIL_AUTH', true);
   define('PERCH_EMAIL_SECURE', 'tls');
   define("PERCH_EMAIL_HOST", "smtp.postmarkapp.com");
-  define('PERCH_EMAIL_USERNAME', '***REMOVED***');
-  define('PERCH_EMAIL_PASSWORD', '***REMOVED***');
 
   define('PERCH_LOGINPATH', '/cms');
   define('PERCH_PATH', str_replace(DIRECTORY_SEPARATOR.'config', '', __DIR__));
@@ -51,6 +57,3 @@
 
   define('PERCH_HTML5', true);
   define('PERCH_RWD', true);
-
-
-

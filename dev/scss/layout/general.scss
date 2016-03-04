@@ -1,19 +1,7 @@
 body {
-  @include container(40em);
+  @include container(25em);
   padding-left: 0.5em;
   padding-right: 0.5em;
-}
-
-@media (min-width: $m) {
-
-  [role="banner"],
-  [role="main"],
-  [role="complementary"],
-  [role="contentinfo"] {
-    @include layout($wide);
-    width: span(4 of 6);
-    @include pre(1 of 6);
-  }
 }
 
 $section-divider: 3em;
