@@ -1,14 +1,7 @@
 .DS_Store
 .sass-cache/
-.htaccess
+*.css.map
 robots.txt
 /node_modules/
-/dev/img/
-/dev/fonts/
-/dev/components/
-/web/cms/addons/feathers/energybubble/img/
-/web/cms/addons/feathers/energybubble/fonts/
-/web/cms/resources/
-/web/img/
-*.css.map
 favicon.ico
+/dist/
