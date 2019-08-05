@@ -1,0 +1,9 @@
+[role="banner"] {
+  padding-top: 1em;
+
+  .logo {
+    @include layout($default);
+    width: span(2 of 4);
+    display: inline-block;
+  }
+}

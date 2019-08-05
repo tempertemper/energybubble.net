@@ -1,0 +1,31 @@
+# energybubble.net
+
+
+## Development environment
+
+### Set up
+Run `npm install` in the project ***REMOVED*** to install the node packages.
+
+### Running
+Run `npm start` in the project ***REMOVED*** to spin up the development environment.
+
+### Updating dependencies
+Run `npm update` in the project ***REMOVED*** to update packages.
+
+
+## Staging release
+- Merge working code to `staging` branch
+- Push staging branch to trigger build and deploy to http://staging.energybubble.net
+
+
+## Production release
+
+- Create a release branch
+- Bump the version number:
+    - For a major  `npm run bump:major`
+    - For a minor  `npm run bump:minor`
+    - For a patch  `npm run bump:patch`
+- Update the .changelog with details of what has been added/changed/fixed/removed
+- Tag the branch with the version number
+- Merge the release branch into `master` to trigger deploy to https://energybubble.net
+- Merge the release branch into `develop`
