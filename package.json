@@ -13,7 +13,7 @@
     "bump:minor": "gulp bump:minor",
     "bump:patch": "gulp bump:patch"
   },
-  "author": "Martin Underhill",
+  "author": "Beatriz Rodríguez Pérez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tempertemper/energybubble/issues"

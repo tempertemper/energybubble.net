@@ -1,0 +1,15 @@
+Gets site building
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch develop
+# Your branch is ahead of 'energybubble/develop' by 6 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   .eleventy.js
+#	modified:   package.json
+#
+# Untracked files:
+#	src/site/
+#
