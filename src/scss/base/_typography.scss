@@ -19,15 +19,13 @@ body {
 a {
   color: $colour-primary;
 
-  &:link,
-  &:visited {
-    text-decoration: none;
+  &:hover {
+    color: $colour-primary-darker;
   }
 
-  &:hover,
-  &:active,
   &:focus {
-    text-decoration: underline;
+    background-color: $colour-primary-light;
+    outline: none;
   }
 }
 
