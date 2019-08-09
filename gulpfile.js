@@ -94,7 +94,7 @@ gulp.task('cleanAssets', () => {
 // Copy JavaScript files
 gulp.task('jsFiles', () => {
   return gulp.src(paths.src.modules)
-    .pipe(gulp.dest(paths.dist.scripts));
+    .pipe(gulp.dest('src/site/_includes'));
 });
 
 // Copy fonts
