@@ -11,5 +11,27 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+### Adds
+- Adds 'from' date to copyright in footer
+- Dark mode styling
+- Adds Sublime Text project config file
+- Adds this .changelog file
+- Adds nginx config example file
+- Adds .editorconfig file
+
+### Changes
+- Refactors site using [Eleventy](https://www.11ty.io/)
+- Changes build tool from Grunt to Gulp
+
+### Removes
+- Gets rid of navigation
+- Removes Perch
+- Removes reference to tempertemper.net in footer
+- Removes unused font files
+
+### Fixes
+- Styles links in an accessible way
+- Makes SCSS files partials, with the `_` prefix
+
 ----------
 
