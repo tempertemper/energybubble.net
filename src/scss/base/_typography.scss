@@ -25,7 +25,12 @@ a {
 
   &:focus {
     background-color: $colour-primary-light;
-    outline: none;
+    outline: 2px solid $colour-primary-light;
+
+    @include dark-mode() {
+      background-color: $colour-dark-mode-highlight;
+      outline: 2px solid $colour-dark-mode-highlight;
+    }
   }
 }
 
