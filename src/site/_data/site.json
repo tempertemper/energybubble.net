@@ -1,0 +1,15 @@
+{
+  "title": "energybubble",
+  "company": "energybubble",
+  "version": "3.0.0",
+  "url": "https://energybubble.net",
+  "baseurl": "",
+  "repo": "http://github.com/tempertemper/energybubble",
+  "comments": false,
+  "author": {
+    "name": "Beatriz Rodríguez Pérez",
+    "twitter": "@energybubble",
+    "email": "hello+website@energybubble.net"
+  },
+  "og_locale": "en_GB"
+}

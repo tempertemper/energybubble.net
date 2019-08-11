@@ -1,0 +1,12 @@
+// Admin
+@import "admin/variables",
+        "admin/mixins";
+
+// Base
+@import "base/reset",
+        "base/general",
+        "base/typography";
+
+// Components
+@import "components/header",
+        "components/footer";

@@ -1,0 +1,13 @@
+---
+title: Positive passion
+intro: |
+    This is a blog about anything and everything in my life.
+layout: base
+home: true
+---
+
+<ol class="hfeed listing" reversed>
+    {% for post in collections.post | reverse %}
+        {% include "post-in-list.html" %}
+    {% endfor %}
+</ol>

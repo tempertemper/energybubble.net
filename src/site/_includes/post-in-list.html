@@ -1,0 +1,11 @@
+<li class="hentry">
+    <h2>
+        <a href="{{ post.url  | replace(".html", "") }}" rel="bookmark" class="entry-title">
+            {{ post.data.title | smart | safe }}
+        </a>
+    </h2>
+    <p class="entry-published date">{{ post.data.date | date }}</p>
+    <div class="description entry-summary">
+        {{ post.data.intro  | markdown | safe }}
+    </div>
+</li>

@@ -1,0 +1,74 @@
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.5;
+  font-size: 100%;
+
+  @media (min-width: $xs) {
+    font-size: 120%;
+  }
+
+  @media (min-width: $s) {
+    font-size: 140%;
+  }
+
+  @media (min-width: $m) {
+    font-size: 160%;
+  }
+}
+
+a {
+  color: $colour-primary;
+
+  &:hover {
+    color: $colour-primary-darker;
+  }
+
+  &:focus {
+    background-color: $colour-primary-light;
+    outline: 2px solid $colour-primary-light;
+
+    @include dark-mode() {
+      background-color: $colour-dark-mode-highlight;
+      outline: 2px solid $colour-dark-mode-highlight;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+ul {
+  list-style-position: inside;
+
+  @media (min-width: $m) {
+    list-style-position: outside;
+  }
+}
+
+.hfeed {
+  list-style-type: none;
+}
+
+.dt-published,
+.entry-published {
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.entry-summary {
+
+  p {
+    margin-bottom: 0;
+  }
+}
