@@ -9,11 +9,11 @@
         {%- set description = content | striptags(true) | escape | truncate(150) %}
     {%- endif %}
     <meta name="description" content="{{ description }}" />
-    <meta property="og:site_name" content="tempertemper Web Design" />
+    <meta property="og:site_name" content="energybubble" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:title" content="{{ heading if heading else title }}" />
     <meta property="og:description" content="{{ description }}" />
-    <meta property="og:image" content="{{ site.url }}/assets/img/tempertemper-web-design-logo-facebook.jpg" />
+    <meta property="og:image" content="{{ site.url }}/assets/img/energybubble-logo-facebook.jpg" />
     {%- if tags.length >= 1 and tags.includes('post') %}
         {%- set type = "article" %}
     {%- else %}
@@ -28,7 +28,7 @@
     <meta name="twitter:title" content="{{ heading if heading else title }}" />
     <meta name="twitter:description" content="{{ description }}" />
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="twitter:image" content="{{ site.url }}/assets/img/tempertemper-web-design-logo-facebook.jpg" />
+    <meta property="twitter:image" content="{{ site.url }}/assets/img/energybubble-logo-facebook.jpg" />
 
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
     <meta name="format-detection" content="telephone=no">
@@ -40,8 +40,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon-180x180.png" />
     <link rel="icon" href="/assets/img/icons/favicon.png">
     <!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico"><![endif]-->
-    <link rel="mask-icon" href="/assets/img/icons/tempertemper.svg" color="black">
-    <meta name="theme-color" content="#0097DB">
+    <link rel="mask-icon" href="/assets/img/icons/energybubble.svg" color="black">
+    <meta name="theme-color" content="#fd9100">
     <script>
         {% include "html5shiv.min.js" %}
     </script>
