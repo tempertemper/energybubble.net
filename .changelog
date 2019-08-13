@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file. The format 
 - Adds this .changelog file
 - Adds nginx config example file
 - Adds .editorconfig file
+- Adds Apple touch icons, favicons and SVG icon
 
 ### Changes
 - Refactors site using [Eleventy](https://www.11ty.io/)
@@ -32,6 +33,7 @@ All notable changes to this project will be documented in this file. The format 
 ### Fixes
 - Styles links in an accessible way
 - Makes SCSS files partials, with the `_` prefix
+- Fixes broken logo SVG
 
 ----------
 

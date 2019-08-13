@@ -4,13 +4,13 @@
 ## Development environment
 
 ### Set up
-Run `npm install` in the project ***REMOVED*** to install the node packages.
+Run `npm install` in the project root to install the node packages.
 
 ### Running
-Run `npm start` in the project ***REMOVED*** to spin up the development environment.
+Run `npm start` in the project root to spin up the development environment.
 
 ### Updating dependencies
-Run `npm update` in the project ***REMOVED*** to update packages.
+Run `npm update` in the project root to update packages.
 
 
 ## Staging release
