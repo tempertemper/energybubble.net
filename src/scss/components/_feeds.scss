@@ -1,0 +1,11 @@
+.feeds {
+  @include remove-list-styling;
+
+  a {
+    display: inline-flex;
+  }
+
+  [class^="icon"] {
+    margin-right: .25em;
+  }
+}
