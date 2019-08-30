@@ -11,6 +11,11 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+## [3.0.0] - 2019-08-30
+
+
 ### Adds
 - Adds 'from' date to copyright in footer
 - Dark mode styling
@@ -19,6 +24,8 @@ All notable changes to this project will be documented in this file. The format 
 - Adds nginx config example file
 - Adds .editorconfig file
 - Adds Apple touch icons, favicons and SVG icon
+- Adds RSS feed
+- Link to Twitter and RSS
 
 ### Changes
 - Refactors site using [Eleventy](https://www.11ty.io/)
@@ -35,5 +42,4 @@ All notable changes to this project will be documented in this file. The format 
 - Makes SCSS files partials, with the `_` prefix
 - Fixes broken logo SVG
 
-----------
 
