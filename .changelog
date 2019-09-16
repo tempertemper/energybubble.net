@@ -11,9 +11,16 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+### Adds
+- Redirects from Netlify subdomain to main domain
+- Adds `rel="canonical"` to document `<head>`
+
+### Fixes
+- Removes `.html` file extension from URLs in `<head>`
+
 ----------
 
-## [3.0.0] - 2019-08-xx
+## [3.0.0] - 2019-08-30
 
 
 ### Adds

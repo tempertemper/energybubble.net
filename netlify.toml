@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+[[redirects]]
+  from = "https://energybubble.netlify.com/*"
+  to = "https://energybubble.net/:splat"
+  status = 302
