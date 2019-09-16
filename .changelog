@@ -11,6 +11,11 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+
+## [3.0.1] - 2019-09-16
+
 ### Adds
 - Redirects from Netlify subdomain to main domain
 - Adds `rel="canonical"` to document `<head>`
@@ -18,10 +23,8 @@ All notable changes to this project will be documented in this file. The format 
 ### Fixes
 - Removes `.html` file extension from URLs in `<head>`
 
-----------
 
 ## [3.0.0] - 2019-08-30
-
 
 ### Adds
 - Adds 'from' date to copyright in footer
