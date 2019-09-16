@@ -10,7 +10,7 @@
     {%- endif %}
     <meta name="description" content="{{ description }}" />
     <meta property="og:site_name" content="energybubble" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace('.html', '') }}" />
     <meta property="og:title" content="{{ heading if heading else title }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:image" content="{{ site.url }}/assets/img/energybubble-logo-facebook.jpg" />
@@ -27,11 +27,12 @@
     <meta name="twitter:creator" content="{{ site.author.twitter }}" />
     <meta name="twitter:title" content="{{ heading if heading else title }}" />
     <meta name="twitter:description" content="{{ description }}" />
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url | replace('.html', '') }}" />
     <meta property="twitter:image" content="{{ site.url }}/assets/img/energybubble-logo-facebook.jpg" />
 
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
     <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace('.html', '') }}">
 
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png" />
     <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png" />
