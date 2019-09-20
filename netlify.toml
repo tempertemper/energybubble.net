@@ -2,4 +2,5 @@
 [[redirects]]
   from = "https://energybubble.netlify.com/*"
   to = "https://energybubble.net/:splat"
-  status = 302
+  status = 301
+  force = true
