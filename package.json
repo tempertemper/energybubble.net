@@ -10,7 +10,6 @@
     "start": "gulp cleanSite && gulp buildAll && gulp serve",
     "build": "gulp cleanSite && gulp buildAll",
     "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
-    "production": "npm run build && echo 'User-agent: *\nSitemap: https://energybubble.net/sitemap.xml' > dist/robots.txt",
     "bump:major": "gulp bump:major",
     "bump:minor": "gulp bump:minor",
     "bump:patch": "gulp bump:patch"
