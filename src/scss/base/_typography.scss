@@ -72,3 +72,16 @@ ul {
     margin-bottom: 0;
   }
 }
+
+blockquote {
+  position: relative;
+
+  &:before {
+    content: '“';
+    position: absolute;
+    color: $colour-primary;
+    font-size: 3em;
+    top: -.25em;
+    left: -.55em;
+  }
+}
