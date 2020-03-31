@@ -77,7 +77,7 @@ blockquote {
   position: relative;
 
   &:before {
-    content: '“';
+    content: open-quote;
     position: absolute;
     color: $colour-primary;
     font-size: 3em;
