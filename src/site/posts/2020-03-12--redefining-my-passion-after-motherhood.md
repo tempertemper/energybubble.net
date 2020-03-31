@@ -2,7 +2,7 @@
 title: Redefining my passion after motherhood
 intro: |
     Eight and and a half years of childrearing have meant that I’ve forgotten many of the things that used to fire me up and even my sense of who I am.
-date: 2012-03-12
+date: 2020-03-12
 ---
 
 Eight and and a half years of childrearing have meant that I’ve forgotten many of the things that used to fire me up. All those long days changing nappies, going to the park and preparing meals on repeat have dampened down my own desires, wishes and even my sense of who I am.

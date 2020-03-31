@@ -15,9 +15,11 @@ All notable changes to this project will be documented in this file. The format 
 - Changes canonical version of website to www.
 - Redirects Netlify subdomain to www version of domain
 - Bumps a few package versions
+- Filters en dashes out of generated URLs
 
 ### Adds
 - robots.txt file is created by package.json
+- Styles `<blockquote>`s
 
 ### Fixes
 - Removes whitespace at end of SVG files
