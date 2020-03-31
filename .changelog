@@ -14,6 +14,24 @@ All notable changes to this project will be documented in this file. The format 
 ----------
 
 
+## [3.0.2] - 2020-03-31
+
+### Changes
+- Changes canonical version of website to www.
+- Redirects Netlify subdomain to www version of domain
+- Bumps a few package versions
+- Filters en dashes out of generated URLs
+
+### Adds
+- robots.txt file is created by package.json
+- Styles `<blockquote>`s
+
+### Fixes
+- Removes whitespace at end of SVG files
+- Makes Eleventy run using version in repo (with npx)
+- Ensures Netlify subdomain redirect is permanent
+
+
 ## [3.0.1] - 2019-09-16
 
 ### Adds
