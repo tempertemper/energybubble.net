@@ -11,6 +11,12 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+### Fixes
+- Updates npm packages to fix several vulnerabilities
+
+### Changes
+- Replaces gulp bump with npm bump
+
 ----------
 
 
