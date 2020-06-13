@@ -11,13 +11,16 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+
+## [3.0.3] - 2020-06-13
+
 ### Fixes
 - Updates npm packages to fix several vulnerabilities
 
 ### Changes
 - Replaces gulp bump with npm bump
-
-----------
 
 
 ## [3.0.2] - 2020-03-31
