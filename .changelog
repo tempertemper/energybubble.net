@@ -19,6 +19,8 @@ All notable changes to this project will be documented in this file. The format 
 ### Adds
 - Adds GitHub action to automatically change version number
 
+### Removes
+- Prevents tagging on version bump
 
 ## [3.0.3] - 2020-06-13
 
