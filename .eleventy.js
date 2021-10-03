@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt({
     html: true,
     typographer: true
-  }).use(anchor, {slugify: uslugify}));
+  }).use(anchor, {slugify: uslugify, tabIndex: false}));
   var mdIntro = markdownIt({
     typographer: true
   });

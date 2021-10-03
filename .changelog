@@ -19,12 +19,14 @@ All notable changes to this project will be documented in this file. The format 
 ### Changes
 - Makes files to update via Bump more explicit
 - Updates npm packages to newest versions
+- Stops markdown-it-anchor adding tabindex=-1 to headings
 
 ### Adds
 - Adds GitHub action to automatically change version number
 
 ### Removes
 - Prevents tagging on version bump
+
 
 ## [3.0.3] - 2020-06-13
 
