@@ -11,10 +11,13 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+
+## [3.0.4] - 2021-10-03
+
 ### Adds
 - Adds GitHub action to automatically change version number
-
-----------
 
 
 ## [3.0.3] - 2020-06-13
