@@ -23,6 +23,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Adds
 - Adds GitHub action to automatically change version number
+- Adds .nvmrc file to specify node version to use
 
 ### Removes
 - Prevents tagging on version bump
