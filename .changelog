@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file. The format 
 ### Removes
 - Removes devDependencies and dependencies distinction in package.json
 - Removes Gulp as a dependency
+- Removes code syntax highlighting functionality
 
 ----------
 

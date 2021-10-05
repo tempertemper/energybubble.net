@@ -41,12 +41,6 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  /* Code syntax highlighting */
-  const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-  eleventyConfig.addPlugin(syntaxHighlight, {
-    templateFormats: ["njk", "md"],
-  });
-
   /* RSS */
   const pluginRss = require("@11ty/eleventy-plugin-rss");
   eleventyConfig.addPlugin(pluginRss);
