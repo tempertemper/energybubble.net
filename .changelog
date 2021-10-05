@@ -11,6 +11,11 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+
+## [3.1.0] - 2021-10-05
+
 ### Changes
 - Uses npm scripts to build site
 
@@ -18,8 +23,6 @@ All notable changes to this project will be documented in this file. The format 
 - Removes devDependencies and dependencies distinction in package.json
 - Removes Gulp as a dependency
 - Removes code syntax highlighting functionality
-
-----------
 
 
 ## [3.0.4] - 2021-10-03
