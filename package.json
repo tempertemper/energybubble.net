@@ -7,10 +7,19 @@
     "url": "https://github.com/tempertemper/energybubble.git"
   },
   "scripts": {
-    "start": "gulp cleanSite && gulp buildAll && gulp serve",
-    "build": "gulp cleanSite && gulp buildAll",
+    "clear": "rm -rf dist",
+    "img": "mkdir -p src/img/ && mkdir -p dist/assets/img/ && cp -a src/img/. dist/assets/img/",
+    "sass": "sass src/scss/style.scss --style=compressed dist/assets/css/style.css",
+    "autoprefixer": "postcss -u autoprefixer -r dist/assets/css/*.css",
+    "build:assets": "npm run img && npm run sass && npm run autoprefixer",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build": "npm run clear && npm run build:assets && npm run build:eleventy",
+    "serve": "npx @11ty/eleventy --serve --quiet",
+    "watch:css": "onchange 'src/scss' -- npm run sass && npm run autoprefixer",
+    "watch:img": "onchange 'src/img' -- npm run img",
+    "watch:assets": "run-p watch:css watch:img",
+    "start": "npm run clear && npm run build:assets && run-p serve watch:assets",
     "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
-    "production": "npm run build && echo 'User-agent: *\nSitemap: https://www.energybubble.net/sitemap.xml' > dist/robots.txt",
     "bump:major": "bump major --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json",
     "bump:minor": "bump minor --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json",
     "bump:patch": "bump patch --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json"
@@ -25,7 +34,7 @@
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "autoprefixer": "^10.3.3",
-    "html5shiv": "^3.7.3"
+    "html5shiv": "^3.7.3",
     "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.3.1",
     "modularscale-sass": "^3.0.10",

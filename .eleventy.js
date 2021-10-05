@@ -36,7 +36,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("slug", function(str) {
     return slugify(str, {
       replacement: "-",
-      remove: /[*+~–.,()'"‘’“”!?:@]/g,
+      remove: /[*+~.,–—()'"‘’“”!?:;@]/g,
       lower: true
     });
   });
@@ -71,6 +71,20 @@ module.exports = function(eleventyConfig) {
     return new Date().getFullYear();
   });
 
+  /* Localhost server config */
+  eleventyConfig.setBrowserSyncConfig({
+    port: 3000,
+    watch: true,
+    server: {
+      baseDir: "./dist/",
+      serveStaticOptions: {
+        extensions: ["html"]
+      }
+    },
+    open: false,
+    notify: false
+  });
+
   return {
     dir: {
       input: "src/site",
@@ -78,7 +92,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       layouts: "_layouts"
     },
-    templateFormats : ["njk", "html", "md"],
+    templateFormats : ["njk", "html", "md", "txt", "webmanifest", "ico"],
     htmlTemplateEngine : "njk",
     markdownTemplateEngine : "njk"
   };

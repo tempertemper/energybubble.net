@@ -11,8 +11,12 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+### Changes
+- Uses npm scripts to build site
+
 ### Removes
 - Removes devDependencies and dependencies distinction in package.json
+- Removes Gulp as a dependency
 
 ----------
 
