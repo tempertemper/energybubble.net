@@ -14,6 +14,32 @@ All notable changes to this project will be documented in this file. The format 
 ----------
 
 
+## [3.1.0] - 2021-10-05
+
+### Changes
+- Uses npm scripts to build site
+
+### Removes
+- Removes devDependencies and dependencies distinction in package.json
+- Removes Gulp as a dependency
+- Removes code syntax highlighting functionality
+
+
+## [3.0.4] - 2021-10-03
+
+### Changes
+- Makes files to update via Bump more explicit
+- Updates npm packages to newest versions
+- Stops markdown-it-anchor adding tabindex=-1 to headings
+
+### Adds
+- Adds GitHub action to automatically change version number
+- Adds .nvmrc file to specify node version to use
+
+### Removes
+- Prevents tagging on version bump
+
+
 ## [3.0.3] - 2020-06-13
 
 ### Fixes

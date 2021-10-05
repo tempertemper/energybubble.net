@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt({
     html: true,
     typographer: true
-  }).use(anchor, {slugify: uslugify}));
+  }).use(anchor, {slugify: uslugify, tabIndex: false}));
   var mdIntro = markdownIt({
     typographer: true
   });
@@ -36,15 +36,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("slug", function(str) {
     return slugify(str, {
       replacement: "-",
-      remove: /[*+~–.,()'"‘’“”!?:@]/g,
+      remove: /[*+~.,–—()'"‘’“”!?:;@]/g,
       lower: true
     });
-  });
-
-  /* Code syntax highlighting */
-  const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-  eleventyConfig.addPlugin(syntaxHighlight, {
-    templateFormats: ["njk", "md"],
   });
 
   /* RSS */
@@ -71,6 +65,20 @@ module.exports = function(eleventyConfig) {
     return new Date().getFullYear();
   });
 
+  /* Localhost server config */
+  eleventyConfig.setBrowserSyncConfig({
+    port: 3000,
+    watch: true,
+    server: {
+      baseDir: "./dist/",
+      serveStaticOptions: {
+        extensions: ["html"]
+      }
+    },
+    open: false,
+    notify: false
+  });
+
   return {
     dir: {
       input: "src/site",
@@ -78,7 +86,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       layouts: "_layouts"
     },
-    templateFormats : ["njk", "html", "md"],
+    templateFormats : ["njk", "html", "md", "txt", "webmanifest", "ico"],
     htmlTemplateEngine : "njk",
     markdownTemplateEngine : "njk"
   };
