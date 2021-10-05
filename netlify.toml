@@ -4,3 +4,24 @@
   to = "https://www.energybubble.net/:splat"
   status = 301
   force = true
+
+
+## Redirects from older URLs
+
+[[redirects]]
+  from = "/blog/the-cages-we-live-in---a-journey-into-self-discovery"
+  to = "/blog/the-cages-we-live-in-a-journey-into-self-discovery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/coronavirus---the-great-reset-button"
+  to = "/blog/coronavirus-the-great-reset-button"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mental-decluttering---4-steps-to-clear-your-mind"
+  to = "/blog/mental-decluttering-4-steps-to-clear-your-mind"
+  status = 301
+  force = true
