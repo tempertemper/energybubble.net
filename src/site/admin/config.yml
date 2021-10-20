@@ -1,0 +1,26 @@
+backend:
+  # Use netlify identity as backend
+  # name: git-gateway
+  branch: main
+  ### enable below lines for github integration ###
+  name: github
+  repo: tempertemper/energybubble.net
+
+# media_folder: "src/img/blog"
+# public_folder: "/dist/assets/img"
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+# publish_mode: editorial_workflow
+collections:
+  - label: "Blog"
+    name: "blog"
+    folder: "src/site/posts"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "intro", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
