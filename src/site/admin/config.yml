@@ -11,7 +11,7 @@ local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: "Blog"
-    name: "blog"
+    name: "posts"
     folder: "src/site/posts"
     create: true
     editor:
@@ -19,5 +19,5 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "intro", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
