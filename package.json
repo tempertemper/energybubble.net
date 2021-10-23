@@ -19,6 +19,7 @@
     "watch:img": "onchange 'src/img' -- npm run img",
     "watch:assets": "run-p watch:css watch:img",
     "start": "npm run clear && npm run build:assets && run-p serve watch:assets",
+    "cms": "npx netlify-cms-proxy-server",
     "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
     "bump:major": "bump major --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json",
     "bump:minor": "bump minor --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json",
