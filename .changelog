@@ -15,7 +15,7 @@ All notable changes to this project will be documented in this file. The format 
 ----------
 
 
-## [3.2.0] - 2021-10-23
+## [3.2.1] - 2021-10-23
 
 ### Changes
 - Refines configuration of blog post template in Netlify CMS
