@@ -25,3 +25,27 @@
   to = "/blog/mental-decluttering-4-steps-to-clear-your-mind"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/feeds/blog/feed.xml"
+  to = "/feeds/main.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/feed.xml"
+  to = "/feeds/main.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mental-decluttering-4-steps-to-clear-your-mind"
+  to = "/blog/a-really-simple-exercise-to-clear-your-mind-and-find-clarity"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-cages-we-live-in---a-journey-into-self-discovery"
+  to = "/blog/the-cages-we-live-in-a-journey-into-self-discovery"
+  status = 301
+  force = true

@@ -1,5 +1,5 @@
 ---
-title: Mental decluttering – 4 steps to clear your mind
+title: A really simple exercise to clear your mind and find clarity
 intro: |
     Feeling overwhelmed? Is life too much? Sometimes things get on top of us. Here's a simple technique to help you feel better.
 date: 2020-03-19
