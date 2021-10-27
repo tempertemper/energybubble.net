@@ -1,5 +1,5 @@
 ---
-title: The cages we live in – a journey into self discovery
+title: The cages we live in -- a journey into self discovery
 intro: |
   Have you ever considered that our comfort zones could be creating prisons of our own making? What can we do to break out?
 date: 2020-06-13
