@@ -25,3 +25,15 @@
   to = "/blog/mental-decluttering-4-steps-to-clear-your-mind"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/feeds/blog/feed.xml"
+  to = "/feeds/main.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/feed.xml"
+  to = "/feeds/main.xml"
+  status = 301
+  force = true
