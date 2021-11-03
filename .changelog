@@ -11,8 +11,14 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
-
 ----------
+
+
+## [3.2.2] - 2021-11-03
+
+### Changes
+- Adds some colour to the Dark Mode background
+- Switches fonts so that sans-serif is main and serif for headings
 
 
 ## [3.2.1] - 2021-10-23
