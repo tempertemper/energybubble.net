@@ -1,7 +1,6 @@
 ---
 title: Who do you think you are?
-intro: |
-    Who you think you are is for the most part who you've been told you are since you were born, but is that really who we are?
+intro: Who you think you are is for the most part who you've been told you are since you were born, but is that really who we are?
 date: 2021-10-06
 ---
 

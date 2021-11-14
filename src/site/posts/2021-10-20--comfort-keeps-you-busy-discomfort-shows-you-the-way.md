@@ -1,7 +1,6 @@
 ---
 title: Comfort keeps you busy; discomfort shows you the way
-intro: |
-    We’re encouraged to seek comfort. We strive to make ourselves comfortable every moment of every day. But what about if comfort was keeping us prisoner?
+intro: We’re encouraged to seek comfort. We strive to make ourselves comfortable every moment of every day. But what about if comfort was keeping us prisoner?
 date: 2021-10-20
 ---
 

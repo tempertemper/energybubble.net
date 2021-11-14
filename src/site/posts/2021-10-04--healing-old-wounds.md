@@ -1,7 +1,6 @@
 ---
 title: Healing old wounds
-intro: |
-    My pain body, as Eckhart Tolle calls it, is really active around romantic relationships. It's probably when it's most active, aside from money.
+intro: My pain body, as Eckhart Tolle calls it, is really active around romantic relationships. It's probably when it's most active, aside from money.
 date: 2021-10-04
 ---
 

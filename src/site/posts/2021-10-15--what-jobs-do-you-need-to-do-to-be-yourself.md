@@ -1,7 +1,6 @@
 ---
 title: What jobs do you need to do to be yourself?
-intro: |
-    Every label that you identify yourself with carries a set of jobs and rules that you need to perform and adhere to dutifully in order to maintain that particular identity.
+intro: Every label that you identify yourself with carries a set of jobs and rules that you need to perform and adhere to dutifully in order to maintain that particular identity.
 date: 2021-10-15
 ---
 

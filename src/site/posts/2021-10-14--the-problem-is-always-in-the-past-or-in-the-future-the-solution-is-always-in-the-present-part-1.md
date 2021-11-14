@@ -1,7 +1,6 @@
 ---
 title: The problem is always in the past or in the future, the solution is always in the present, part 1
-intro: |
-    Over the last few weeks, I have honed in to what an important truth: our minds are not functional tools to engineer a joyful life.
+intro: "Over the last few weeks, I have honed in to what an important truth: our minds are not functional tools to engineer a joyful life."
 date: 2021-10-14
 ---
 

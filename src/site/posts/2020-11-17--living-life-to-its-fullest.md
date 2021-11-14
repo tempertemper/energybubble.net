@@ -1,7 +1,6 @@
 ---
 title: Living life to its fullest
-intro: |
-    We've been sold the idea that things, experiences or even relationships will fill that void inside us. The actual method is a lot closer to home.
+intro: We've been sold the idea that things, experiences or even relationships will fill that void inside us. The actual method is a lot closer to home.
 date: 2020-11-17
 ---
 

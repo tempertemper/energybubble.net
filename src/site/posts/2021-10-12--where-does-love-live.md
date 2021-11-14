@@ -1,7 +1,6 @@
 ---
 title: Where does love live?
-intro: |
-    As humans, after all our primary needs are met, all we ever do is try to feel love. Every action has been curated over our lives by our egos to try and feel love and joy.
+intro: As humans, after all our primary needs are met, all we ever do is try to feel love. Every action has been curated over our lives by our egos to try and feel love and joy.
 date: 2021-10-12
 ---
 

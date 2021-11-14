@@ -1,7 +1,6 @@
 ---
 title: What's the purpose of it all?
-intro: |
-    So what's the purpose of it all? What is the purpose of Life…? Big question, I know, but for some reason I'm always pondering this big, abyss-like question which at times can, I admit, consume me and make me miserable.
+intro: So what's the purpose of it all? What is the purpose of Life…? Big question, I know, but for some reason I'm always pondering this big, abyss-like question which at times can, I admit, consume me and make me miserable.
 date: 2012-07-28
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Coronavirus -- the great reset button
-intro: |
-  Is there anything positive to take away from this crazy hiatus we find ourselves in? I think so.
+intro: Is there anything positive to take away from this crazy hiatus we find ourselves in? I think so.
 date: 2020-03-29
 ---
 

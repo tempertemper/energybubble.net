@@ -1,7 +1,6 @@
 ---
 title: Don't fight with what is
-intro: |
-    The last few months of married life have been rough, but after a big argument we had a break-through and I realised what I'd been doing wrong.
+intro: The last few months of married life have been rough, but after a big argument we had a break-through and I realised what I'd been doing wrong.
 date: 2021-10-05
 ---
 

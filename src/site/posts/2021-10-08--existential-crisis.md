@@ -1,7 +1,6 @@
 ---
 title: Existential crisis
-intro: |
-    In my twenties I watched a science program that explained how the first spark of life started, which plunged me into a full blown existential crisis.
+intro: In my twenties I watched a science program that explained how the first spark of life started, which plunged me into a full blown existential crisis.
 date: 2021-10-08
 ---
 

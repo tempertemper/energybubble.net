@@ -1,7 +1,6 @@
 ---
 title: What is life's purpose?
-intro: |
-    Jon Kabat Zinn has a wonderful idea that has really helped me get a handle on the purpose of existence.
+intro: Jon Kabat Zinn has a wonderful idea that has really helped me get a handle on the purpose of existence.
 date: 2021-10-01
 ---
 

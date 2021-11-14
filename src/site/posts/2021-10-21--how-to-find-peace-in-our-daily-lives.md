@@ -1,7 +1,6 @@
 ---
 title: How to find peace in our daily lives
-intro: |
-    Whenever I was rattled by something that was going on in my life my dad always used to tell me that 'the horizon is always in the same place'.
+intro: Whenever I was rattled by something that was going on in my life my dad always used to tell me that 'the horizon is always in the same place'.
 date: 2021-10-21
 ---
 

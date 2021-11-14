@@ -1,7 +1,6 @@
 ---
 title: "Coping mechanism: cleaning"
-intro: |
-    My mum's visiting after almost two years of COVID restrictions and I've got a massive urge to deep clean my house.
+intro: My mum's visiting after almost two years of COVID restrictions and I've got a massive urge to deep clean my house.
 date: 2021-10-13
 ---
 
