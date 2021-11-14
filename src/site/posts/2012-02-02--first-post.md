@@ -1,7 +1,6 @@
 ---
 title: First Post
-intro: |
-    I'm a new mum, and it's bloody hard work! Why did nobody ever told me that this little being was going to turn my world upside down… So much for the baby guides that teach you about what do you need to do next in your pregnancy, exercise, decorate the nursery or pack your back for the hospital… what about get your head around the fact that your life is over and you're about to become a slave to a baby.
+intro: I'm a new mum, and it's bloody hard work! Why did nobody ever told me that this little being was going to turn my world upside down… So much for the baby guides that teach you about what do you need to do next in your pregnancy, exercise, decorate the nursery or pack your back for the hospital… what about get your head around the fact that your life is over and you're about to become a slave to a baby.
 date: 2012-02-02
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: More harm than good
-intro: |
-    What is most important: to have a 'perfect' house or to be happy and full of life?
+intro: "What is most important: to have a 'perfect' house or to be happy and full of life?"
 date: 2021-10-11
 ---
 

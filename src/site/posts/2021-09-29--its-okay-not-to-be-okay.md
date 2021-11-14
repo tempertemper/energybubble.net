@@ -1,7 +1,6 @@
 ---
 title: It's okay not to be okay
-intro: |
-    It's okay to be a mess, scattered, sad, angry, bored, unmotivated, and/or grumpy. We're human and those are states that humans can and do experience.
+intro: It's okay to be a mess, scattered, sad, angry, bored, unmotivated, and/or grumpy. We're human and those are states that humans can and do experience.
 date: 2021-09-29
 ---
 

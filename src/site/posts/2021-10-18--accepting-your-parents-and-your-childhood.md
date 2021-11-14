@@ -1,7 +1,6 @@
 ---
 title: Accepting your parents and your childhood
-intro: |
-    I have a complicated relationship with my mum. My parents divorced when I was ten, and we lost our family home and my mum struggled to make ends meet.
+intro: I have a complicated relationship with my mum. My parents divorced when I was ten, and we lost our family home and my mum struggled to make ends meet.
 date: 2021-10-18
 ---
 

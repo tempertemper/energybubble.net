@@ -1,7 +1,6 @@
 ---
 title: Living life to its fullest
-intro: |
-    We've been sold the idea that things, experiences or even relationships will fill that void inside us. The actual method is a lot closer to home.
+intro: We've been sold the idea that things, experiences or even relationships will fill that void inside us. The actual method is a lot closer to home.
 date: 2020-11-17
 ---
 
@@ -11,7 +10,7 @@ We've been sold this idea that tells us that 'things' or 'experiences' or even r
 
 However, if we think about it, we realise that for a moment we feel some relief, not total relief, but partial at least, and that seems to suffice and then we get onto the next thing, planning, researching, fantasising… Never stopping long enough to really think about if this system of continuous consumption really works. Deep down we have a feeling that it doesn't but we have been given no other pointers as to what to do instead so we stick to the known evil rather than looking for a better solution to our existential problem.
 
-What is it then? 
+What is it then?
 
 What would it take to feel complete? To have that feeling of peace, of not needing a single thing, of total contentment. They say that sometimes the things we look for are under our noses and in this case it couldn't be more true.
 
@@ -25,5 +24,4 @@ However, it couldn't be easier to reverse this crazy way of living. We just need
 
 What can you do today to implement this?
 
-Make a cup of tea or coffee, sit down in your favourite place or somewhere quiet, and take 15min just to really pay attention to that moment, the colour, temperature, and smell of your drink, of you feel, your posture, what is around you, just to appreciate that moment fully. Once you do it tell me how you felt! 
-
+Make a cup of tea or coffee, sit down in your favourite place or somewhere quiet, and take 15 minutes just to really pay attention to that moment, the colour, temperature, and smell of your drink, of you feel, your posture, what is around you, just to appreciate that moment fully. Once you do it tell me how you felt!

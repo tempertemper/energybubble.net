@@ -1,7 +1,6 @@
 ---
 title: The reason for this blog
-intro: |
-    I love self-development and have always wanted to share my ideas in a blog, but there was always something stopping me… Time to put that right.
+intro: I love self-development and have always wanted to share my ideas in a blog, but there was always something stopping me… Time to put that right.
 date: 2021-09-30
 ---
 

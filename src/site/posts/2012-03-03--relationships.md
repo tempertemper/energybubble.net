@@ -1,7 +1,6 @@
 ---
 title: Relationships
-intro: |
-    I'd like my second post on my blog to be about relationships. Romantic relationships. Everybody wants one, most have one at some point or another for a longer or shorter period of time, what really what makes a relationship with a partner worthwhile? what makes it last?
+intro: I'd like my second post on my blog to be about relationships. Romantic relationships. Everybody wants one, most have one at some point or another for a longer or shorter period of time, what really what makes a relationship with a partner worthwhile? what makes it last?
 date: 2012-03-03
 ---
 
