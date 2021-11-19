@@ -1,7 +1,7 @@
 ---
 title: Give yourself the thing that you need the most from others
 intro: How often do we resent someone behaving in a way we think they shouldn't, just because there's something we need and we're looking outwards for it?
-date: 2021-11-18
+date: 2021-11-17
 ---
 
 What if we could give ourselves most of the things we crave emotionally? We don't tend to think about emotional needs as something we can attend to ourselves but if we stop and think for a moment we'll find that we truly can be our own best friend.
