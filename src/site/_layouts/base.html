@@ -2,21 +2,23 @@
 <html lang="en">
     {% include "head.html" %}
     <body>
-        {% include "header.html" %}
-        <main id="main" role="main">
-            <h1>{{ heading if heading else title | smart | safe }}</h1>
-            {% if tags.length >= 1 and tags.includes('post') %}
-                <p class="entry-published date">{{ date | date }}</p>
-            {% endif %}
-            {% if intro and not hideIntro %}
-                <div class="intro">{{ intro | markdown | safe }}</div>
-            {% endif %}
-            {{ content | safe }}
-            {% if tags.length >= 1 and tags.includes('post') %}
-                <p><a href="/">View all posts</a></p>
-            {% endif %}
-        </main>
-        {% include "footer.html" %}
+        <div class="wrapper">
+            {% include "header.html" %}
+            <main id="main" role="main">
+                <h1>{{ heading if heading else title | smart | safe }}</h1>
+                {% if tags.length >= 1 and tags.includes('post') %}
+                    <p class="entry-published date">{{ date | date }}</p>
+                {% endif %}
+                {% if intro and not hideIntro %}
+                    <div class="intro">{{ intro | markdown | safe }}</div>
+                {% endif %}
+                {{ content | safe }}
+                {% if tags.length >= 1 and tags.includes('post') %}
+                    <p><a href="/">View all posts</a></p>
+                {% endif %}
+            </main>
+            {% include "footer.html" %}
+        </div>
         {%- if home %}
             <!-- Netlify Identity Widget -->
             <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
