@@ -1,5 +1,5 @@
 ---
-title: Are you wasting your life?
+title: Life on automatic pilot
 intro: Are you present in your life? Or do you feel is a never-ending string of chores that you do in automatic pilot.
 date: 2021-11-24
 ---
