@@ -11,6 +11,10 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+### Fixes
+- Ensures blog filenames are written correctly
+- Corrects wrongly written blog filenames
+
 ----------
 
 
