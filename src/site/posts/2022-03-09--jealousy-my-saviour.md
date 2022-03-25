@@ -6,7 +6,7 @@ intro: Jealousy has been a constant in my life. I remember my first fit of
   exhausting.
 date: 2022-03-09T10:43:06.175Z
 ---
-Jealousy has been a constant in my life. I remember my first fit of intense jealousy when I had my first boyfriend at thirteen. It was so intense, visceral, a huge force that chewed me whole and then spat me out. And it has continued being a constant in my life, something of a sixth sense that would tell me that I needed to stand on guard and protect what was mine. 
+Jealousy has been a constant in my life. I remember my first fit of intense jealousy when I had my first boyfriend at thirteen. It was so intense, visceral, a huge force that chewed me whole and then spat me out. And it has continued being a constant in my life, something of a sixth sense that would tell me that I needed to stand on guard and protect what was mine.
 
 Only it was a maladaptive emotion, something I had learned from my codependent parents and that only led me to negative emotions and outcomes instead of making me feel safe and comforted, which is all I wanted.
 
