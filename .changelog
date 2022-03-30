@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Changes
 - Better controls output of blog posts to listing in CMS
+- Uses more YAML-y format for blog field config in CMS
 
 ----------
 
