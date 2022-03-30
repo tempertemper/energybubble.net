@@ -19,6 +19,8 @@ collections:
     name: "posts"
     folder: "src/site/posts"
     create: true
+    summary: "{{year}}-{{month}}-{{day}}: {{title}}"
+    sortable_fields: ["date"]
     editor:
       preview: false
     slug: "{{year}}-{{month}}-{{day}}--{{slug}}"
