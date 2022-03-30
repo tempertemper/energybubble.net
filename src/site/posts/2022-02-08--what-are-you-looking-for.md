@@ -2,7 +2,7 @@
 title: What are you looking for?
 intro: We think we're looking for happiness, but what we are really looking for
   is ourselves.
-date: 2022-02-08T09:43:49.456Z
+date: 2022-02-08
 ---
 We're in a continual search of ourselves in our future happiness. We love to conjure really intricate scenarios in our minds of how life should unfold. Likewise, we think that if only all those things came to be, our search would be over. For all to start all over again, as soon as we get to our goal.
 

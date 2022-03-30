@@ -4,7 +4,7 @@ intro: Our comfort zones are so familiar to us that we rather stick with them
   when we know they don’t serve us well. We know they’re contrary to the life of
   peace, enthusiasm and joy we want to lead but we stick with them because they
   give us a false sense of security.
-date: 2022-03-03T09:44:10.908Z
+date: 2022-03-03
 ---
 > **Learn to love the edges of your comfort zone because they point your way to freedom**
 

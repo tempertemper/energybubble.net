@@ -5,7 +5,7 @@ intro: Ever felt like negative emotions and thoughts can take over and put you
   when that happens to me. It's called the RAIN method and Iit's a method
   developed by Tara Brach, the famous psychologist and author. This four steps
   can help us to get out of the trance that old fears and trauma can put us in.
-date: 2022-03-04T10:14:43.604Z
+date: 2022-03-04
 ---
 Good morning everyone,
 

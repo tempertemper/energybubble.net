@@ -3,7 +3,7 @@ title: How to feel less fear and anxiety
 intro: We all walk around, with a list of ideas and rules around who our little
   me is, what is supposed to be doing, who it likes, who it doesn't like etc.
   Like someone had given us a script and we're acting it out.
-date: 2022-01-14T09:59:14.968Z
+date: 2022-01-14
 ---
 'I am not my thoughts, emotions, sense perceptions and experiences. I am not the content of my Life. I am the space in which all things happen. I am consciousness. I am the Now. I am.'
 

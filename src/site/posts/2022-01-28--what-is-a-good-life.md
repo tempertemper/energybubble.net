@@ -2,7 +2,7 @@
 title: What is a good life?
 intro: Our addiction as a society to having things the way we want them to be is
   one of the biggest sources of suffering.
-date: 2022-01-28T14:33:02.090Z
+date: 2022-01-28
 ---
 Our addiction as a society to having things the way we want them to be is one of the biggest sources of suffering.
 

@@ -4,7 +4,7 @@ intro: Jealousy has been a constant in my life. I remember my first fit of
   intense jealousy when I had my first boyfriend at thirteen. It was so intense,
   visceral, a huge force that chewed me whole and then spat me out, it was
   exhausting.
-date: 2022-03-09T10:43:06.175Z
+date: 2022-03-09
 ---
 Jealousy has been a constant in my life. I remember my first fit of intense jealousy when I had my first boyfriend at thirteen. It was so intense, visceral, a huge force that chewed me whole and then spat me out. And it has continued being a constant in my life, something of a sixth sense that would tell me that I needed to stand on guard and protect what was mine.
 

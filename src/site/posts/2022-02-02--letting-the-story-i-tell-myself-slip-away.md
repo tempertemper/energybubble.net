@@ -2,7 +2,7 @@
 title: Letting the story I tell myself slip away
 intro: Have you ever felt bound by your thoughts and beliefs about who you are
   and how you should behave?
-date: 2022-02-02T14:03:51.711Z
+date: 2022-02-02
 ---
 Every day life challenges me, it wants me to be wild and free. It calls me to be like I was when I was a kid. But then my programming kicks in. The pull is so strong. It wants me to comply, to do as I'm told and not to come out of my box.
 

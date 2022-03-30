@@ -2,7 +2,7 @@
 title: What lies underneath your sense of self?
 intro: Something I was listening in a podcast really got me thinking yesterday.
   It was the content of the importance of speaking your truth.
-date: 2022-01-13T10:11:47.051Z
+date: 2022-01-13
 ---
 
 I heard something interesting yesterday from a podcast I was listening to; it was talking about the concept of the importance speaking your truth. I think it was something the writer and thinker Jordan Peterson quoted. It's the idea of putting forward into the world that which you know to be true for you.

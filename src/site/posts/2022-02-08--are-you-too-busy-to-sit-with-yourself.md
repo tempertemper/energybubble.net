@@ -2,7 +2,7 @@
 title: Are you too busy to sit with yourself?
 intro: We think we're looking for happiness, but what we are really looking for
   is ourselves.
-date: 2022-02-08T09:51:41.595Z
+date: 2022-02-08
 ---
 And because of this we're in a merry-go-round of getting busy to try and find our future happiness, when really, what we're looking for is always there.
 

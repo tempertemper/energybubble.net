@@ -3,7 +3,7 @@ title: Being your authentic self requires courage
 intro: The purpose and meaning of my life is to create a clear path between me
   and my soul. So that its power and beauty can help me be as much of my
   authentic self as possible.
-date: 2022-01-11T16:13:20.268Z
+date: 2022-01-11
 ---
 'The purpose and meaning of my life is for me to create a clear path between me and my soul. So that its power and beauty can help me be as much of my authentic self as possible.'
 

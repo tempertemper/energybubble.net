@@ -3,7 +3,7 @@ title: Phone and computer addiction
 intro: My phone and computer have taken over my life. Slowly but surely these
   devices have taken more and more of my attention and time. More than I'm
   probably comfortable admitting.
-date: 2022-01-18T09:32:50.605Z
+date: 2022-01-18
 ---
 My phone and computer have taken over my life. Slowly but surely these devices have taken over more and more of my attention and time. More than I'm probably comfortable admitting.
 

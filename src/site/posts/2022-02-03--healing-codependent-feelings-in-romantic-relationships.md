@@ -3,7 +3,7 @@ title: Healing codependent feelings in romantic relationships
 intro: Last night I had a very vivid dream. It was the kind of dream that is not
   only visual, but that you also get immersed in how you would feel if the dream
   was true.
-date: 2022-02-03T14:31:44.706Z
+date: 2022-02-03
 ---
 Last night I had a very vivid dream. It was the kind of dream that is not only visual, but that you also get immersed in how you would feel if the dream was true.
 

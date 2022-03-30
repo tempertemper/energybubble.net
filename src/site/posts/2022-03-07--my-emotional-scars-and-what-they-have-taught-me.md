@@ -3,7 +3,7 @@ title: My emotional scars and what they have taught me
 intro: My goal is to become emotionally healthy and I've figured out that my
   emotional scars always point me to the biggest wins when it comes to my
   emotional health
-date: 2022-03-07T16:51:49.190Z
+date: 2022-03-07
 ---
 Imagine this situation. You've been married for a couple of decades at this point and have a couple of kids. Life feels pretty exhausting and things in the relationship are a bit lacklustre to say the least. My husband starts to act cold and distant. Thinking about it rationally, it's probably a normal reaction to how life is at this given point and the lack of time we have to connect and have a good time together. After all, it just feels like we're surviving at this point, rather than thriving.
 

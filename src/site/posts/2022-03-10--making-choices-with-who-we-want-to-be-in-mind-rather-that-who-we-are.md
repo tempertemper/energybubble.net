@@ -2,7 +2,7 @@
 title: Making choices with who we want to be in mind rather that who we are
 intro: Our minds are great tools, but they can also put barriers in front of us
   when it comes to predicting a better future for ourselves.
-date: 2022-03-10T11:23:21.775Z
+date: 2022-03-10
 ---
 Our minds are great at telling us what's going on. They're like an obstinate uncle that has an opinion about everything. The only issue is that our minds make predictions based on what's already happened to us, what have we've been taught so far and what we think is possible.
 

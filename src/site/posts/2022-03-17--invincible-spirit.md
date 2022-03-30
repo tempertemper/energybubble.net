@@ -3,7 +3,7 @@ title: Invincible spirit
 intro: I'm at a crossroads in life. I left my career when my daughter was born.
   That was eleven years ago.  Here I am now, trying to find a new path for
   myself in the world of work.
-date: 2022-03-17T10:40:09.483Z
+date: 2022-03-17
 ---
 I'm at a crossroads in life. I left my career when my daughter was born. That was eleven years ago.  Here I am now, trying to find a new path for myself in the world of work. I feel vulnerable and small. It feels so daunting and scary to start over at fourty four years old, but at the same time insignificant when I compare it to what my grandma Gloria did.
 
