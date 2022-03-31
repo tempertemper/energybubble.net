@@ -2,7 +2,7 @@
 title: Be the hero of your own story
 intro: Yesterday I heard something really inspiring that to me really epitomizes
   what a life of high purpose means.
-date: 2022-02-11T10:12:37.416Z
+date: 2022-02-11
 ---
 Yesterday I heard something really inspiring that to me really epitomizes what a life of high purpose means. 
 

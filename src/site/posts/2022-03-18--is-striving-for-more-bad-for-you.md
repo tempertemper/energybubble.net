@@ -3,7 +3,7 @@ title: Is striving for more bad for you?
 intro: I am always looking for something to make myself feel better. All the
   time, I'm looking for a change, for something else. For not now. Not this.
   Surely my happiness could be anywhere else but right here.
-date: 2022-03-18T14:06:45.062Z
+date: 2022-03-18
 ---
 I am always looking for something to make myself feel better. All the time, I'm looking for a change, for something else. For not now. Not this. Surely my happiness could be anywhere else but right here.
 

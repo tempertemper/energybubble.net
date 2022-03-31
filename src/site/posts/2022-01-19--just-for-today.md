@@ -2,7 +2,7 @@
 title: Just for today
 intro: This 'Just for Today' text has helped millions of people to have a plan
   for a good day and to turn around their lives.
-date: 2022-01-19T09:40:17.295Z
+date: 2022-01-19
 ---
 Today, I wanted to share this prayer that my dad always read to me. It's used in most 12 step recovery programms, such as AA. My dad, read and lived by those rules and he went from someone that was spiritually bankrupt and needed to drink because reality was just too much to bear, to one of the most enlightened people I've ever known. 
 

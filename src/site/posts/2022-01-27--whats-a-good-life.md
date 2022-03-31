@@ -3,7 +3,7 @@ title: What's a good life?
 intro: Our addiction as a society to having things the way we want them to be or
   expect them to be is one of the biggest sources of suffering in rich
   countries.
-date: 2022-01-27T09:36:44.149Z
+date: 2022-01-27
 ---
 Our addiction as a society to having things the way we want them to be or expect them to be is one of the biggest sources of suffering in rich countries. 
 

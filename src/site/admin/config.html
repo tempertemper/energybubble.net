@@ -19,12 +19,36 @@ collections:
     name: "posts"
     folder: "src/site/posts"
     create: true
+    summary: "{{year}}-{{month}}-{{day}}: {{title}}"
+    sortable_fields: ["date"]
     editor:
       preview: false
     slug: "{{year}}-{{month}}-{{day}}--{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "intro", widget: "string", hint: "This should be under 150 characters." }
-      - { label: "Date", name: "date", widget: "datetime", time_format: false, date_format: "YYYY-MM-DD" }
-      - { label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"], editor_components: [] }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Description"
+        name: "intro"
+        widget: "string"
+        hint: "This should be under 150 characters."
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        time_format: false
+        date_format: "YYYY-MM-DD"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        buttons:
+          - "bold"
+          - "italic"
+          - "link"
+          - "heading-two"
+          - "heading-three"
+          - "quote"
+          - "bulleted-list"
+          - "numbered-list"
+        editor_components: []
 {% endraw %}

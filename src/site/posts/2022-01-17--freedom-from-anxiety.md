@@ -3,7 +3,7 @@ title: Freedom from anxiety
 intro: " What is anxiety? To me it feels like something that doesn't want me to
   rest. As if someone is nudging and bumping me constantly and I can't rest. I
   must be alert at all times."
-date: 2022-01-17T12:35:12.440Z
+date: 2022-01-17
 ---
 
 What is anxiety? To me it feels like something that doesn't want me to rest. As if someone is nudging and bumping me constantly and I can't rest. I must be alert at all times. There's danger near, I must have all my wits about me. But most of the time, this is just a feeling created by my thoughts as in reality there's no danger anywhere near. 

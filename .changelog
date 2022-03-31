@@ -14,6 +14,17 @@ All notable changes to this project will be documented in this file. The format 
 ----------
 
 
+## [3.2.6] - 2022-03-30
+
+### Changes
+- Better controls output of blog posts to listing in CMS
+- Uses more YAML-y format for blog field config in CMS
+- Only writes date to blog front matter via CMS, not time
+
+### Fixes
+- Removes timestamp from CMS generated blog posts
+
+
 ## [3.2.5] - 2022-03-25
 
 ### Changes

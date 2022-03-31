@@ -3,7 +3,7 @@ title: Are you paying attention to reality?
 intro: One of the main reasons why we suffer is because we're constantly trying
   to get reality to match up to what we've made up in our heads that it should
   be.
-date: 2022-01-28T14:15:13.361Z
+date: 2022-01-28
 ---
 One of the main reasons why we suffer is because we're constantly trying to get reality to match up to what we've made up in our heads that it should be. 
 

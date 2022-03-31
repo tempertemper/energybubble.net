@@ -2,7 +2,7 @@
 title: Why I don't drink alcohol or take drugs
 intro: Some of my thoughts on why I don't take alcohol and drugs even if
   recreationally hampers your growth
-date: 2022-03-07T19:23:45.420Z
+date: 2022-03-07
 ---
 I guess the short answer to this question is: clarity. Clarity is one of my biggest assets, without it, I feel like I would look at the world through a dirty window.
 

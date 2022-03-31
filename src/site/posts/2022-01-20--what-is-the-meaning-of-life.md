@@ -3,7 +3,7 @@ title: What is the meaning of life?
 intro: Finding what the meaning of life has for a long time, both interested me
   and given me a healthy dose of existential angst. What is the point of all the
   experiences we have, all the work that we do? Does any of it mean anything?
-date: 2022-01-20T09:57:26.220Z
+date: 2022-01-20
 ---
 Finding what the meaning of life is has for a long time, both interested me and given me a healthy dose of existential angst. What is the point of all the experiences we have, all the work that we do? Is it all for nothing, just energy being moving around for a few years (milliseconds in universe time) and then dying? Is that all we are? 
 

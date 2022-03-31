@@ -4,7 +4,7 @@ intro: "My ego always feels helpless and insecure. It needs to control things,
   it needs to work out ways to feel secure. My dad always used to tell me: 'only
   the insecure look for security' and at the time I really didn't understand
   what he meant."
-date: 2022-03-23T10:51:17.067Z
+date: 2022-03-23
 ---
 My ego always feels helpless and insecure. It needs to control things, it needs to work out ways to feel secure. My dad always used to tell me: 'only the insecure look for security' and at the time I really didn't understand what he meant.
 
