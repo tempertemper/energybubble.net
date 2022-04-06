@@ -1,5 +1,5 @@
 ---
-title: "They key to inner peace: Releasing old emotional patterns"
+title: "They key to inner peace: Releasing old energy patterns"
 intro: In order to feel more at peace with ourselves and with life, we must be
   willing to experience the old energy patterns that want to be released from
   our minds and hearts.
