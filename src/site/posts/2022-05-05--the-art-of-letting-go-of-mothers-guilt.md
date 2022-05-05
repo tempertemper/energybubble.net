@@ -1,5 +1,5 @@
 ---
-title: The art of letting go of mother's guilt
+title: "Mother's guilt: Letting it go"
 intro: Don't hide on your children. Don't put them up as an excuse not to do
   what you know what you should do. Let go of mother's guilt. It's a trap. You
   should be doing what your heart wants you to do.
