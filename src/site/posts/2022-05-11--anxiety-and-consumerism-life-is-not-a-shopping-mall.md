@@ -1,5 +1,5 @@
 ---
-title: Anxiety and consumerism. Life is not a shopping mall
+title: Anxiety and consumerism, are we treating life as a catalogue?
 intro: Feeling less anxious has a lot to do with relinquishing this need for
   control, with unlearning the ideas that marketing and consumerism have
   instilled in us.
