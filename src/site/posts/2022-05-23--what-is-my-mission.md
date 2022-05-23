@@ -1,6 +1,6 @@
 ---
 title: What is my Mission
-intro: Some thoughts on what my mission is with this Blog
+intro: Getting clear on what I'm trying to achieve with Energybubble.net
 date: 2022-05-23
 ---
 What is my Mission?
