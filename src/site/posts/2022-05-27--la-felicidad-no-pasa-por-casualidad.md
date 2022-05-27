@@ -33,4 +33,4 @@ Ser feliz es darnos cuanta de cuando estamos siendo huraños y verlo como una se
 
 Ser feliz es cuidar nuestro cuerpo. Cada uno sabe la mejor manera de cuidarse, seguir las pautas que sabemos que le dan vitalidad a nuestro cuerpo nos hace feliz. 
 
-Ser feliz y es elegir lo difícil. Hay una expresión que dice. Acción fácil, vida difícil. Acción difícil, vida fácil. La gratificación inmediata nos cuesta muy cara, pero hacer lo difícil aun cuando no tenemos ganas crea una vida mucho más fácil a largo plazo.
+Ser feliz es elegir lo difícil. Hay una expresión que dice. Acción fácil, vida difícil. Acción difícil, vida fácil. La gratificación inmediata nos cuesta muy cara, pero hacer lo difícil aun cuando no tenemos ganas crea una vida mucho más fácil a largo plazo.
