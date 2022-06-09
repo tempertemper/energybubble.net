@@ -1,10 +1,8 @@
 ---
-title: Picking things up after a break
-intro: Life has the habit of always keeping us on our toes. Whenever I get into
-  a good routine with something, in my case, at this point, it's writing this
-  blog, life has this lovely way of always keeping me on my toes by throwing a
-  holiday, or an illness or a break of some sort that will derail our efforts of
-  getting into a good routine
+title: The importance of doing our real work
+intro: Doing your real work, that thing that you know you should do, that thing
+  that you know you've been putting off for years, it's the most important
+  mission you have on any given day
 date: 2022-06-09
 ---
 Life has the habit of always keeping us on our toes. Whenever I get into a good routine with something, in my case, at this point, it's writing this blog, life has this lovely way of always keeping me on my toes by throwing a holiday, or an illness or a break of some sort that will derail my efforts of getting into a good routine with writing. 
