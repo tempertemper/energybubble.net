@@ -31,7 +31,7 @@
     "url": "https://github.com/tempertemper/energybubble/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "autoprefixer": "^10.3.3",
     "html5shiv": "^3.7.3",
