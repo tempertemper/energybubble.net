@@ -1,35 +1,38 @@
+@use "admin/mixins";
+@use "admin/variables";
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5;
   font-size: 100%;
 
-  @media (min-width: $xs) {
+  @media (min-width: variables.$xs) {
     font-size: 120%;
   }
 
-  @media (min-width: $s) {
+  @media (min-width: variables.$s) {
     font-size: 140%;
   }
 
-  @media (min-width: $m) {
+  @media (min-width: variables.$m) {
     font-size: 160%;
   }
 }
 
 a {
-  color: $colour-primary;
+  color: variables.$colour-primary;
 
   &:hover {
-    color: $colour-primary-darker;
+    color: variables.$colour-primary-darker;
   }
 
   &:focus {
-    background-color: $colour-primary-light;
-    outline: 2px solid $colour-primary-light;
+    background-color: variables.$colour-primary-light;
+    outline: 2px solid variables.$colour-primary-light;
 
-    @include dark-mode() {
-      background-color: $colour-dark-mode-highlight;
-      outline: 2px solid $colour-dark-mode-highlight;
+    @include mixins.dark-mode() {
+      background-color: variables.$colour-dark-mode-highlight;
+      outline: 2px solid variables.$colour-dark-mode-highlight;
     }
   }
 }
@@ -49,7 +52,7 @@ h6 {
 ul {
   list-style-position: inside;
 
-  @media (min-width: $m) {
+  @media (min-width: variables.$m) {
     list-style-position: outside;
   }
 }
@@ -78,7 +81,7 @@ blockquote {
   &:before {
     content: open-quote;
     position: absolute;
-    color: $colour-primary;
+    color: variables.$colour-primary;
     font-size: 3em;
     top: -.25em;
     left: -.55em;

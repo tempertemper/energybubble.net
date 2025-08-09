@@ -1,13 +1,10 @@
-// Admin
-@import "admin/variables",
-        "admin/mixins";
+@use "admin/variables";
+@use "admin/mixins";
 
-// Base
-@import "base/reset",
-        "base/general",
-        "base/typography";
+@use "base/reset";
+@use "base/general";
+@use "base/typography";
 
-// Components
-@import "components/header",
-        "components/footer",
-        "components/feeds";
+@use "components/header";
+@use "components/footer";
+@use "components/feeds";

@@ -1,5 +1,7 @@
+@use "admin/variables";
+
 [role="contentinfo"] {
-  margin-top: $section-divider;
+  margin-top: variables.$section-divider;
 
   p {
     margin-top: 0;

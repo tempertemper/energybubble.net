@@ -1,3 +1,5 @@
+@use "admin/variables";
+
 // Layout
 
 html {
@@ -95,7 +97,7 @@ textarea:focus {
 
 [type="search"] {
   -webkit-appearance: none;
-  border-radius: $border-radius-default;
+  border-radius: variables.$border-radius-default;
   box-shadow: none;
 }
 

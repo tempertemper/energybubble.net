@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Layout breakpoints
 $xs: 20em;
 $s: 31em;
@@ -7,10 +9,10 @@ $xl: 72em;
 
 // Light mode colours
 $colour-primary: #FD9100;
-$colour-primary-lighter: lighten($colour-primary, 5%);
-$colour-primary-light: lighten($colour-primary, 40%);
-$colour-primary-darker: darken($colour-primary, 5%);
-$colour-primary-darkest: darken($colour-primary, 15%);
+$colour-primary-lighter: color.adjust($colour-primary, $lightness: 5%);
+$colour-primary-light: color.adjust($colour-primary, $lightness: 40%);
+$colour-primary-darker: color.adjust($colour-primary, $lightness: -5%);
+$colour-primary-darkest: color.adjust($colour-primary, $lightness: -15%);
 $colour-white: #ffffff;
 $colour-black: #000000;
 
