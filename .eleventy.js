@@ -65,18 +65,9 @@ module.exports = function(eleventyConfig) {
     return new Date().getFullYear();
   });
 
-  /* Localhost server config */
-  eleventyConfig.setBrowserSyncConfig({
+  // Localhost server config
+  eleventyConfig.setServerOptions({
     port: 3000,
-    watch: true,
-    server: {
-      baseDir: "./dist/",
-      serveStaticOptions: {
-        extensions: ["html"]
-      }
-    },
-    open: false,
-    notify: false
   });
 
   return {
