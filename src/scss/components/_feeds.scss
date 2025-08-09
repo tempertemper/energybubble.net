@@ -1,5 +1,7 @@
+@use "admin/mixins";
+
 .feeds {
-  @include remove-list-styling;
+  @include mixins.remove-list-styling;
 
   a {
     display: inline-flex;

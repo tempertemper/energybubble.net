@@ -1,7 +1,10 @@
+@use "admin/mixins";
+@use "admin/variables";
+
 body {
-  background-color: $colour-white;
-  color: $colour-black;
-  @include dark-mode($background: $colour-dark-mode-main, $color: $colour-dark-mode-white);
+  background-color: variables.$colour-white;
+  color: variables.$colour-black;
+  @include mixins.dark-mode($background: variables.$colour-dark-mode-main, $color: variables.$colour-dark-mode-white);
 }
 
 .wrapper {
