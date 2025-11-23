@@ -1,73 +1,80 @@
-module.exports = function(eleventyConfig) {
+import smartypants from "smartypants";
+import uslug from "uslug";
+import markdownIt from "markdown-it";
+import anchor from "markdown-it-anchor";
+import slugify from "slugify";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import dateFilter from "./lib/filters/dates.js";
+
+export default function(eleventyConfig) {
 
   /* Date filter */
-  eleventyConfig.addFilter("date", require("./lib/filters/dates.js") );
+  eleventyConfig.addFilter("date", dateFilter);
 
   /* Data */
   eleventyConfig.setDataDeepMerge(true);
 
   /* Smart quotes filter */
-  const smartypants = require("smartypants");
-  eleventyConfig.addFilter("smart", function(str) {
-    return smartypants.smartypants(str, 'qDe');
+  eleventyConfig.addFilter("smart", function (str) {
+    return smartypants(str);
   });
 
   /* Markdown Plugins */
-  var uslug = require('uslug');
-  var uslugify = s => uslug(s);
-  var anchor = require('markdown-it-anchor');
-  var markdownIt = require("markdown-it");
-  eleventyConfig.setLibrary("md", markdownIt({
-    html: true,
-    typographer: true
-  }).use(anchor, {slugify: uslugify, tabIndex: false}));
-  var mdIntro = markdownIt({
+  const uslugify = s => uslug(s);
+  const mdIntro = markdownIt({
     typographer: true
   });
-  eleventyConfig.addFilter("markdown", function(markdown) {
+
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      typographer: true
+    }).use(anchor, { slugify: uslugify, tabIndex: false })
+  );
+
+  eleventyConfig.addFilter("markdown", function (markdown) {
     return mdIntro.render(markdown);
   });
 
-  eleventyConfig.addFilter("twitterLink", function(str) {
+  eleventyConfig.addFilter("twitterLink", function (str) {
     return "https://twitter.com/" + str.replace("@", "");
   });
 
-  const slugify = require("slugify");
-  eleventyConfig.addFilter("slug", function(str) {
+  eleventyConfig.addFilter("slug", function (str) {
     return slugify(str, {
       replacement: "-",
-      remove: /[*+~.,–—()'"‘’“”!?:;@]/g,
+      remove: /[*+~.,–—()'"‘’“"!?:;@]/g,
       lower: true
     });
   });
 
   /* RSS */
-  const pluginRss = require("@11ty/eleventy-plugin-rss");
   eleventyConfig.addPlugin(pluginRss);
 
   /* List all tags */
-  eleventyConfig.addFilter("tags", function(collection) {
-    const notRendered = ['all', 'post', 'resource', 'testimonial'];
+  eleventyConfig.addFilter("tags", function (collection) {
+    const notRendered = ["all", "post", "resource", "testimonial"];
     return Object.keys(collection)
       .filter(d => !notRendered.includes(d))
       .sort();
   });
 
   /* List tags belonging to a page */
-  eleventyConfig.addFilter("tagsOnPage", function(tags) {
-    const notRendered = ['all', 'post', 'resource', 'testimonial'];
+  eleventyConfig.addFilter("tagsOnPage", function (tags) {
+    const notRendered = ["all", "post", "resource", "testimonial"];
     return tags
       .filter(d => !notRendered.includes(d))
       .sort();
   });
 
-  eleventyConfig.addFilter("getCurrentYear", function() {
+  eleventyConfig.addFilter("getCurrentYear", function () {
     return new Date().getFullYear();
   });
 
   // Localhost server config
   eleventyConfig.setServerOptions({
-    port: 3000,
+    port: 3000
   });
 
   return {
@@ -77,8 +84,8 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       layouts: "_layouts"
     },
-    templateFormats : ["njk", "html", "md", "txt", "webmanifest", "ico"],
-    htmlTemplateEngine : "njk",
-    markdownTemplateEngine : "njk"
+    templateFormats: ["njk", "html", "md", "txt", "webmanifest", "ico"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
   };
-};
+}
