@@ -1,4 +1,3 @@
-import uslug from "uslug";
 import markdownIt from "markdown-it";
 import anchor from "markdown-it-anchor";
 import slugify from "slugify";
@@ -8,6 +7,30 @@ import fs from "node:fs";
 import path from "node:path";
 import sass from "sass";
 
+/* Custom slugifier (GitHub-like, but with apostrophes removed and #/+ expanded) */
+const slugifyHeadings = str => {
+  return str
+    .toString()                      // ensure string
+    .normalize("NFKD")               // split accented chars
+    .replace(/['’]/g, "")            // remove apostrophes
+    .replace(/#/g, " sharp ")        // turn C# → c-sharp
+    .replace(/\+/g, " plus ")        // turn C++ → c-plus-plus
+    .replace(/[^\w\s-]/g, "")        // remove remaining punctuation
+    .trim()                          // remove leading/trailing spaces
+    .replace(/\s+/g, "-")            // collapse whitespace to hyphens
+    .replace(/-+/g, "-")             // collapse multiple hyphens
+    .toLowerCase();                  // final slug
+};
+
+/* Shared markdown-it engine */
+const mdEngine = markdownIt({
+  html: true,
+  typographer: true
+}).use(anchor, {
+  slugify: slugifyHeadings,
+  tabIndex: false
+});
+
 export default function(eleventyConfig) {
 
   /* Date filter */
@@ -15,32 +38,6 @@ export default function(eleventyConfig) {
 
   /* Data */
   eleventyConfig.setDataDeepMerge(true);
-
-  /* Markdown Plugins */
-
-  /* Custom slugifier (GitHub-like, but with apostrophes removed and #/+ expanded) */
-  const slugifyHeadings = str => {
-    return str
-      .toString()                      // ensure string
-      .normalize("NFKD")               // split accented chars
-      .replace(/['’]/g, "")            // remove apostrophes
-      .replace(/#/g, " sharp ")        // turn C# → c-sharp
-      .replace(/\+/g, " plus ")        // turn C++ → c-plus-plus
-      .replace(/[^\w\s-]/g, "")        // remove remaining punctuation
-      .trim()                          // remove leading/trailing spaces
-      .replace(/\s+/g, "-")            // collapse whitespace to hyphens
-      .replace(/-+/g, "-")             // collapse multiple hyphens
-      .toLowerCase();                  // final slug
-  };
-
-  /* Shared markdown-it engine */
-  const mdEngine = markdownIt({
-    html: true,
-    typographer: true
-  }).use(anchor, {
-    slugify: slugifyHeadings,
-    tabIndex: false
-  });
 
   /* Smart quotes / inline markdown */
   eleventyConfig.addFilter("smart", function (str) {
@@ -57,15 +54,21 @@ export default function(eleventyConfig) {
 
   /* Build CSS */
   eleventyConfig.on("afterBuild", async () => {
-    const outDir = "dist/assets/css";
-    fs.mkdirSync(outDir, { recursive: true });
-    const result = sass.compile("src/css/style.scss", {
-      loadPaths: ["src/css"],
-      style: "compressed"
-    });
-    fs.writeFileSync(path.join(outDir, "style.css"), result.css);
-    console.log("✓ Sass compiled: src/css/style.scss → dist/assets/css/style.css");
+    try {
+      const outDir = "dist/assets/css";
+      fs.mkdirSync(outDir, { recursive: true });
+      const result = sass.compile("src/css/style.scss", {
+        loadPaths: ["src/css"],
+        style: "compressed"
+      });
+      fs.writeFileSync(path.join(outDir, "style.css"), result.css);
+      console.log("✓ Sass compiled: src/css/style.scss → dist/assets/css/style.css");
+    } catch (err) {
+      console.error("✗ Sass compilation failed", err);
+      throw err;
+    }
   });
+  eleventyConfig.addWatchTarget("src/css");
 
   eleventyConfig.addFilter("slug", function (str) {
     return slugify(str, {
