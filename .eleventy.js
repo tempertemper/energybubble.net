@@ -5,6 +5,9 @@ import anchor from "markdown-it-anchor";
 import slugify from "slugify";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import dateFilter from "./lib/filters/dates.js";
+import fs from "node:fs";
+import path from "node:path";
+import sass from "sass";
 
 export default function(eleventyConfig) {
 
@@ -39,6 +42,18 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addFilter("twitterLink", function (str) {
     return "https://twitter.com/" + str.replace("@", "");
+  });
+
+  // Build CSS
+  eleventyConfig.on("afterBuild", async () => {
+    const outDir = "dist/assets/css";
+    fs.mkdirSync(outDir, { recursive: true });
+    const result = sass.compile("src/css/style.scss", {
+      loadPaths: ["src/css"],
+      style: "compressed"
+    });
+    fs.writeFileSync(path.join(outDir, "style.css"), result.css);
+    console.log("✓ Sass compiled: src/css/style.scss → dist/assets/css/style.css");
   });
 
   eleventyConfig.addFilter("slug", function (str) {

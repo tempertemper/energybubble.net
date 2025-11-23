@@ -9,14 +9,10 @@
   },
   "scripts": {
     "clear": "rm -rf dist",
-    "sass": "sass --load-path=src/scss src/scss/style.scss dist/assets/css/style.css --style=compressed",
-    "build:assets": "npm run sass",
     "build:eleventy": "npx @11ty/eleventy",
-    "build": "npm run clear && npm run build:assets && npm run build:eleventy",
+    "build": "npm run clear && npm run build:eleventy",
     "serve": "npx @11ty/eleventy --serve --quiet",
-    "watch:css": "onchange 'src/scss' -- npm run sass",
-    "watch:assets": "run-p watch:css",
-    "start": "npm run clear && npm run build:assets && run-p serve watch:assets",
+    "start": "npm run clear && npm run serve",
     "cms": "npx netlify-cms-proxy-server",
     "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
 
@@ -36,8 +32,6 @@
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
     "sass": "^1.90.0",
     "smartypants": "^0.2.2",
     "uslug": "^1.0.4"
