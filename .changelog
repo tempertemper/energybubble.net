@@ -11,20 +11,26 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+
+## [3.3.0] - 2025-11-23
+
+### Removes
 - Removes version-bump-prompt in favour of a simple node script
 - Removes unused modular-scale SCSS package
 - Removes unused Susy SCSS package
 - Removes redundant Autoprefixer package
 - Removes HTML5 shiv (drops support for Internet Explorer)
-- Removes image build scripts, using Eleventy instead
+- Removes any reference to Twitter
+
+### Changes
 - Updates config to ES modules syntax
 - Builds CSS with Eleventy rather than npm scripts
+- Removes image build scripts, using Eleventy instead
 - Uses Markdown-it instead of smartypants
-- Removes any reference to Twitter
-- Makes markdown processing code more efficient
 - Uses markdown-it-anchor instead of smartypants
-
-----------
+- Makes markdown processing code more efficient
 
 
 ## [3.2.7] - 2025-08-09
