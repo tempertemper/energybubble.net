@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file. The format 
 - Removes image build scripts, using Eleventy instead
 - Updates config to ES modules syntax
 - Builds CSS with Eleventy rather than npm scripts
+- Uses Markdown-it instead of smartypants
 
 ----------
 

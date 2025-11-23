@@ -1,4 +1,3 @@
-import smartypants from "smartypants";
 import uslug from "uslug";
 import markdownIt from "markdown-it";
 import anchor from "markdown-it-anchor";
@@ -19,7 +18,7 @@ export default function(eleventyConfig) {
 
   /* Smart quotes filter */
   eleventyConfig.addFilter("smart", function (str) {
-    return smartypants(str);
+    return markdownIt({ typographer: true }).renderInline(str);
   });
 
   /* Markdown Plugins */
