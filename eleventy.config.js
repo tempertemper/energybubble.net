@@ -1,0 +1,123 @@
+import markdownIt from "markdown-it";
+import anchor from "markdown-it-anchor";
+import slugify from "slugify";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import dateFilter from "./lib/filters/dates.js";
+import fs from "node:fs";
+import path from "node:path";
+import sass from "sass";
+
+/* Custom slugifier (GitHub-like, but with apostrophes removed and #/+ expanded) */
+const slugifyHeadings = str => {
+  return str
+    .toString()                      // ensure string
+    .normalize("NFKD")               // split accented chars
+    .replace(/['’]/g, "")            // remove apostrophes
+    .replace(/#/g, " sharp ")        // turn C# → c-sharp
+    .replace(/\+/g, " plus ")        // turn C++ → c-plus-plus
+    .replace(/[^\w\s-]/g, "")        // remove remaining punctuation
+    .trim()                          // remove leading/trailing spaces
+    .replace(/\s+/g, "-")            // collapse whitespace to hyphens
+    .replace(/-+/g, "-")             // collapse multiple hyphens
+    .toLowerCase();                  // final slug
+};
+
+/* Shared markdown-it engine */
+const mdEngine = markdownIt({
+  html: true,
+  typographer: true
+}).use(anchor, {
+  slugify: slugifyHeadings,
+  tabIndex: false
+});
+
+export default function(eleventyConfig) {
+
+  /* Date filter */
+  eleventyConfig.addFilter("date", dateFilter);
+
+  /* Data */
+  eleventyConfig.setDataDeepMerge(true);
+
+  /* Smart quotes / inline markdown */
+  eleventyConfig.addFilter("smart", function (str) {
+    return mdEngine.renderInline(str);
+  });
+
+  /* Markdown filter */
+  eleventyConfig.addFilter("markdown", function (markdown) {
+    return mdEngine.render(markdown);
+  });
+
+  /* Set Eleventy's markdown library */
+  eleventyConfig.setLibrary("md", mdEngine);
+
+  /* Build CSS */
+  eleventyConfig.on("afterBuild", async () => {
+    try {
+      const outDir = "dist/assets/css";
+      fs.mkdirSync(outDir, { recursive: true });
+      const result = sass.compile("src/css/style.scss", {
+        loadPaths: ["src/css"],
+        style: "compressed"
+      });
+      fs.writeFileSync(path.join(outDir, "style.css"), result.css);
+      console.log("✓ Sass compiled: src/css/style.scss → dist/assets/css/style.css");
+    } catch (err) {
+      console.error("✗ Sass compilation failed", err);
+      throw err;
+    }
+  });
+  eleventyConfig.addWatchTarget("src/css");
+
+  eleventyConfig.addFilter("slug", function (str) {
+    return slugify(str, {
+      replacement: "-",
+      remove: /[*+~.,–—()'"‘’“"!?:;@]/g,
+      lower: true
+    });
+  });
+
+  /* RSS */
+  eleventyConfig.addPlugin(pluginRss);
+
+  /* List all tags */
+  eleventyConfig.addFilter("tags", function (collection) {
+    const notRendered = ["all", "post", "resource", "testimonial"];
+    return Object.keys(collection)
+      .filter(d => !notRendered.includes(d))
+      .sort();
+  });
+
+  /* List tags belonging to a page */
+  eleventyConfig.addFilter("tagsOnPage", function (tags) {
+    const notRendered = ["all", "post", "resource", "testimonial"];
+    return tags
+      .filter(d => !notRendered.includes(d))
+      .sort();
+  });
+
+  eleventyConfig.addFilter("getCurrentYear", function () {
+    return new Date().getFullYear();
+  });
+
+  /* Passthroughs */
+  eleventyConfig.addPassthroughCopy({ "src/img": "assets/img" });
+
+  /* Localhost server config */
+  eleventyConfig.setServerOptions({
+    port: 3000
+  });
+
+  return {
+    dir: {
+      input: "src/site",
+      output: "dist",
+      includes: "_includes",
+      layouts: "_layouts"
+    },
+    templateFormats: ["njk", "html", "md", "txt", "webmanifest", "ico"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
+  };
+}

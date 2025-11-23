@@ -1,29 +1,25 @@
 {
   "name": "energybubble",
-  "version": "3.2.7",
+  "version": "3.3.0",
   "description": "energybubble's website",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/tempertemper/energybubble.git"
   },
   "scripts": {
     "clear": "rm -rf dist",
-    "img": "mkdir -p src/img/ && mkdir -p dist/assets/img/ && cp -a src/img/. dist/assets/img/",
-    "sass": "sass --load-path=src/scss src/scss/style.scss dist/assets/css/style.css --style=compressed",
-    "autoprefixer": "postcss -u autoprefixer -r dist/assets/css/*.css",
-    "build:assets": "npm run img && npm run sass && npm run autoprefixer",
     "build:eleventy": "npx @11ty/eleventy",
-    "build": "npm run clear && npm run build:assets && npm run build:eleventy",
+    "build": "npm run clear && npm run build:eleventy",
     "serve": "npx @11ty/eleventy --serve --quiet",
-    "watch:css": "onchange 'src/scss' -- npm run sass && npm run autoprefixer",
-    "watch:img": "onchange 'src/img' -- npm run img",
-    "watch:assets": "run-p watch:css watch:img",
-    "start": "npm run clear && npm run build:assets && run-p serve watch:assets",
+    "start": "npm run clear && npm run serve",
     "cms": "npx netlify-cms-proxy-server",
     "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
-    "bump:major": "bump major --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json",
-    "bump:minor": "bump minor --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json",
-    "bump:patch": "bump patch --commit 'Bumps version number to %s' src/site/_data/site.json package.json package-lock.json"
+    "version": "node scripts/sync-site-version.js",
+    "_bump:commit": "git add package*.json src/site/_data/site.json && git commit -m \"Bumps version number to $npm_package_version\"",
+    "bump:patch": "npm version patch --no-git-tag-version && npm run _bump:commit",
+    "bump:minor": "npm version minor --no-git-tag-version && npm run _bump:commit",
+    "bump:major": "npm version major --no-git-tag-version && npm run _bump:commit"
   },
   "author": "Beatriz Rodríguez Pérez",
   "license": "ISC",
@@ -33,18 +29,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
-    "autoprefixer": "^10.4.21",
-    "html5shiv": "^3.7.3",
-    "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "modularscale-sass": "^3.0.10",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
-    "postcss-cli": "^11.0.1",
-    "sass": "^1.90.0",
-    "smartypants": "^0.2.2",
-    "susy": "3.*",
-    "uslug": "^1.0.4",
-    "version-bump-prompt": "^6.1.0"
+    "sass": "^1.90.0"
   }
 }
