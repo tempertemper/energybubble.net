@@ -39,10 +39,6 @@ export default function(eleventyConfig) {
     return mdIntro.render(markdown);
   });
 
-  eleventyConfig.addFilter("twitterLink", function (str) {
-    return "https://twitter.com/" + str.replace("@", "");
-  });
-
   // Build CSS
   eleventyConfig.on("afterBuild", async () => {
     const outDir = "dist/assets/css";
