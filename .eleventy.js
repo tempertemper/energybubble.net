@@ -16,27 +16,21 @@ export default function(eleventyConfig) {
   /* Data */
   eleventyConfig.setDataDeepMerge(true);
 
-  /* Smart quotes filter */
-  eleventyConfig.addFilter("smart", function (str) {
-    return markdownIt({ typographer: true }).renderInline(str);
-  });
-
   /* Markdown Plugins */
   const uslugify = s => uslug(s);
-  const mdIntro = markdownIt({
+  const mdEngine = markdownIt({
+    html: true,
     typographer: true
+  }).use(anchor, { slugify: uslugify, tabIndex: false });
+
+  eleventyConfig.setLibrary("md", mdEngine);
+
+  eleventyConfig.addFilter("smart", function (str) {
+    return mdEngine.renderInline(str);
   });
 
-  eleventyConfig.setLibrary(
-    "md",
-    markdownIt({
-      html: true,
-      typographer: true
-    }).use(anchor, { slugify: uslugify, tabIndex: false })
-  );
-
   eleventyConfig.addFilter("markdown", function (markdown) {
-    return mdIntro.render(markdown);
+    return mdEngine.render(markdown);
   });
 
   // Build CSS

@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file. The format 
 - Builds CSS with Eleventy rather than npm scripts
 - Uses Markdown-it instead of smartypants
 - Removes any reference to Twitter
+- Makes markdown processing code more efficient
 
 ----------
 
