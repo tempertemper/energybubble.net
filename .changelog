@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file. The format 
 - Removes unused Susy SCSS package
 - Removes redundant Autoprefixer package
 - Removes HTML5 shiv (drops support for Internet Explorer)
+- Removes image build scripts, using Eleventy instead
 - Updates config to ES modules syntax
 
 ----------

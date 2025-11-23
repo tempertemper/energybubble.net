@@ -72,6 +72,9 @@ export default function(eleventyConfig) {
     return new Date().getFullYear();
   });
 
+  // Passthroughs
+  eleventyConfig.addPassthroughCopy({ "src/img": "assets/img" });
+
   // Localhost server config
   eleventyConfig.setServerOptions({
     port: 3000
