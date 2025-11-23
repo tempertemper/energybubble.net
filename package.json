@@ -1,6 +1,6 @@
 {
   "name": "energybubble",
-  "version": "3.2.7",
+  "version": "3.3.0",
   "description": "energybubble's website",
   "type": "module",
   "repository": {
@@ -15,7 +15,6 @@
     "start": "npm run clear && npm run serve",
     "cms": "npx netlify-cms-proxy-server",
     "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
-
     "version": "node scripts/sync-site-version.js",
     "_bump:commit": "git add package*.json src/site/_data/site.json && git commit -m \"Bumps version number to $npm_package_version\"",
     "bump:patch": "npm version patch --no-git-tag-version && npm run _bump:commit",
