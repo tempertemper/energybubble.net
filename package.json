@@ -44,7 +44,6 @@
     "sass": "^1.90.0",
     "smartypants": "^0.2.2",
     "susy": "3.*",
-    "uslug": "^1.0.4",
-    "version-bump-prompt": "^6.1.0"
+    "uslug": "^1.0.4"
   }
 }
