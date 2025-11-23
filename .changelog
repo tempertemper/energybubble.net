@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file. The format 
 - Uses Markdown-it instead of smartypants
 - Removes any reference to Twitter
 - Makes markdown processing code more efficient
+- Uses markdown-it-anchor instead of smartypants
 
 ----------
 

@@ -17,23 +17,45 @@ export default function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   /* Markdown Plugins */
-  const uslugify = s => uslug(s);
+
+  /* Custom slugifier (GitHub-like, but with apostrophes removed and #/+ expanded) */
+  const slugifyHeadings = str => {
+    return str
+      .toString()                      // ensure string
+      .normalize("NFKD")               // split accented chars
+      .replace(/['’]/g, "")            // remove apostrophes
+      .replace(/#/g, " sharp ")        // turn C# → c-sharp
+      .replace(/\+/g, " plus ")        // turn C++ → c-plus-plus
+      .replace(/[^\w\s-]/g, "")        // remove remaining punctuation
+      .trim()                          // remove leading/trailing spaces
+      .replace(/\s+/g, "-")            // collapse whitespace to hyphens
+      .replace(/-+/g, "-")             // collapse multiple hyphens
+      .toLowerCase();                  // final slug
+  };
+
+  /* Shared markdown-it engine */
   const mdEngine = markdownIt({
     html: true,
     typographer: true
-  }).use(anchor, { slugify: uslugify, tabIndex: false });
+  }).use(anchor, {
+    slugify: slugifyHeadings,
+    tabIndex: false
+  });
 
-  eleventyConfig.setLibrary("md", mdEngine);
-
+  /* Smart quotes / inline markdown */
   eleventyConfig.addFilter("smart", function (str) {
     return mdEngine.renderInline(str);
   });
 
+  /* Markdown filter */
   eleventyConfig.addFilter("markdown", function (markdown) {
     return mdEngine.render(markdown);
   });
 
-  // Build CSS
+  /* Set Eleventy's markdown library */
+  eleventyConfig.setLibrary("md", mdEngine);
+
+  /* Build CSS */
   eleventyConfig.on("afterBuild", async () => {
     const outDir = "dist/assets/css";
     fs.mkdirSync(outDir, { recursive: true });
@@ -76,10 +98,10 @@ export default function(eleventyConfig) {
     return new Date().getFullYear();
   });
 
-  // Passthroughs
+  /* Passthroughs */
   eleventyConfig.addPassthroughCopy({ "src/img": "assets/img" });
 
-  // Localhost server config
+  /* Localhost server config */
   eleventyConfig.setServerOptions({
     port: 3000
   });
