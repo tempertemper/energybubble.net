@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. The format 
 - Removes version-bump-prompt in favour of a simple node script
 - Removes unused modular-scale SCSS package
 - Removes unused Susy SCSS package
+- Removes redundant Autoprefixer package
 
 ----------
 
